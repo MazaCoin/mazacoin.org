@@ -1,0 +1,8 @@
+# www.robotstxt.org/
+
+# Allow crawling of all content
+User-agent: *
+Disallow:
+
+# Announce sitemap - https://support.google.com/webmasters/answer/183668
+Sitemap: http://mazacoin.org/sitemap.xml

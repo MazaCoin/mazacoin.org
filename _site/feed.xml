@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MAZA Network Development | MAZA</title>
+    <description>Cryptocurrency Network Services for Sovereign Tribes Worldwide
+</description>
+    <link>http://mazacoin.org/</link>
+    <atom:link href="http://mazacoin.org/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Mon, 17 Oct 2016 19:15:47 -0700</pubDate>
+    <lastBuildDate>Mon, 17 Oct 2016 19:15:47 -0700</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Developing MAZA Network Software, Sites, and Docs</title>
+        <description>&lt;h1 id=&quot;how-to-contribute-to-maza-network-software-sites-and-documentation-development&quot;&gt;How To Contribute to MAZA Network Software, Sites, and Documentation Development&lt;/h1&gt;
+
+</description>
+        <pubDate>Sun, 16 Oct 2016 16:19:35 -0700</pubDate>
+        <link>http://mazacoin.org/blog/2016/10/16/developing-maza-network-software-sites-and-docs/</link>
+        <guid isPermaLink="true">http://mazacoin.org/blog/2016/10/16/developing-maza-network-software-sites-and-docs/</guid>
+        
+        <category>contributing,</category>
+        
+        <category>developers</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>MAZA v0.10.2 Released</title>
+        <description>&lt;h1 id=&quot;maza-v0102&quot;&gt;MAZA v0.10.2&lt;/h1&gt;
+
+&lt;p&gt;MAZA-qt and mazad v0.10.2 are now available.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/download&quot;&gt;Downloads&lt;/a&gt; are available via IPFS &amp;amp; IPFS Web Gateways&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;changes Mazacoin &amp;amp; MZC to MAZA&lt;/li&gt;
+  &lt;li&gt;provides a clean rebase onto bitcoin upstream code
+    &lt;ul&gt;
+      &lt;li&gt;removes previous Zetacoin base&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;important-upgrade-note&quot;&gt;Important Upgrade note&lt;/h2&gt;
+
+&lt;p&gt;Please take this time to backup your existing wallet.dat to a safe place&lt;/p&gt;
+
+&lt;p&gt;Those updating from older clients will need to remove the existing peers.dat file, see examples below&lt;/p&gt;
+
+&lt;p&gt;This release will change the default directory names from &lt;code class=&quot;highlighter-rouge&quot;&gt;mazacoin&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;maza&lt;/code&gt; in all cases
+Starting the new client will create a new directory. If you would like you can 
+  - move the blockchain data from your old directory to the new directory
+  - move your wallet.dat from the old directory to the new directory&lt;/p&gt;
+
+&lt;p&gt;You may also move the directory prior to starting you new client:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Linux&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  mv ~/.mazacoin ~/.maza
+  rm ~/.maza/peers.dat
+  mv ~/.maza/mazacoin.conf ~/.maza/maza.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;OSX&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  mv ~/Library/Application&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Support/Mazacoin ~/Library/Application&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Support/Maza
+  rm ~/Library/Application&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Support/Maza/peers.dat
+  mv ~/Library/Application&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Support/Maza/mazacoin.conf ~/Library/Application&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Support/Maza/maza.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Windows&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  xcopy  %APPDATA%&lt;span class=&quot;se&quot;&gt;\M&lt;/span&gt;azacoin %APPDATA%&lt;span class=&quot;se&quot;&gt;\M&lt;/span&gt;aza&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;/E
+  &lt;span class=&quot;nb&quot;&gt;del&lt;/span&gt;  %APPDATA%&lt;span class=&quot;se&quot;&gt;\M&lt;/span&gt;aza&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;eers.dat
+  &lt;span class=&quot;nb&quot;&gt;ren&lt;/span&gt;  %APPDATA%&lt;span class=&quot;se&quot;&gt;\M&lt;/span&gt;aza&lt;span class=&quot;se&quot;&gt;\m&lt;/span&gt;azacoin.conf   %APPDATA%&lt;span class=&quot;se&quot;&gt;\M&lt;/span&gt;aza&lt;span class=&quot;se&quot;&gt;\m&lt;/span&gt;aza.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;downloading-via-ipfs&quot;&gt;Downloading via IPFS&lt;/h2&gt;
+
+&lt;p&gt;While we strive to keep our websites and other services as secure as possible, we
+simply cannot keep them as secure as the MAZAchain, or its cousin &lt;a href=&quot;https://ipfs.io&quot;&gt;IPFS, the 
+Interplanetary File System&lt;/a&gt;. For this reason, we now provide all of our 
+downloads, and signed official sources via IPFS.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Please see our docs on &lt;a href=&quot;/docs/2016/10/16/downloading-maza-via-ipfs/&quot;&gt;How to Download MAZA via IPFS&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;binaries-sha-sums-gpg-signatures-will-be-made-available-on&quot;&gt;Binaries, SHA sums, gpg signatures will be made available on:&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://ipfs.io/ipfs/QmeFphaDUMjMhqih5w54g5mvqKzNMibPJJ8DNehhWtaVME&quot;&gt;MAZA on IPFS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;MAZA is downloaded from IPFS either with a native IPFS client on your machine (safest) 
+or by way of a Web Gateway.&lt;/p&gt;
+
+&lt;p&gt;See our &lt;a href=&quot;/download/&quot;&gt;Download&lt;/a&gt; page for links and more details.&lt;/p&gt;
+
+&lt;h2 id=&quot;all-binaries-are-gpg-signed-please-check-hashes--signatures&quot;&gt;All binaries are gpg signed Please check hashes &amp;amp; signatures!&lt;/h2&gt;
+
+&lt;p&gt;GPG fingerprint: DEF8 9BAC 042C 094F 3BA8  09A7 0750 81C3 91DC 22D1
+Rob Nelson (Release Signing Key) &lt;a href=&quot;&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#116;&amp;#111;:&amp;#114;&amp;#101;&amp;#108;&amp;#101;&amp;#097;&amp;#115;&amp;#101;&amp;#045;&amp;#115;&amp;#105;&amp;#103;&amp;#110;&amp;#105;&amp;#110;&amp;#103;&amp;#064;&amp;#103;&amp;#117;&amp;#114;&amp;#117;&amp;#118;&amp;#097;&amp;#110;&amp;#046;&amp;#110;&amp;#101;&amp;#116;&quot;&gt;&amp;#114;&amp;#101;&amp;#108;&amp;#101;&amp;#097;&amp;#115;&amp;#101;&amp;#045;&amp;#115;&amp;#105;&amp;#103;&amp;#110;&amp;#105;&amp;#110;&amp;#103;&amp;#064;&amp;#103;&amp;#117;&amp;#114;&amp;#117;&amp;#118;&amp;#097;&amp;#110;&amp;#046;&amp;#110;&amp;#101;&amp;#116;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To verify a gpg signature:&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;my_buildmachine:$ &lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;cd&lt;/span&gt;&lt;span class=&quot;kv&quot;&gt; ~/Directory_with_download
+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;my_buildmachine:$ &lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;gpg&lt;/span&gt;&lt;span class=&quot;kv&quot;&gt; --recv-keys 91DC22D1
+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;my_buildmachine:$ &lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;gpg&lt;/span&gt;&lt;span class=&quot;kv&quot;&gt; -k --fingerprint  91DC22D1
+&lt;/span&gt;pub   4096R/91DC22D1 2016-10-11
+      Key fingerprint = DEF8 9BAC 042C 094F 3BA8  09A7 0750 81C3 91DC 22D1
+uid       [  full  ] Rob Nelson (Release Signing Key) &amp;lt;release-signing@guruvan.net&amp;gt;
+sub   4096R/17BA4334 2016-10-11
+sub   4096R/93AEC55F 2016-10-11
+
+&lt;span class=&quot;w&quot;&gt;my_buildmachine:$ &lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;gpg&lt;/span&gt;&lt;span class=&quot;kv&quot;&gt; --verify MAZA_v0.10.2_release-IPFS-hashes.sig
+&lt;/span&gt;gpg: assuming signed data in 'MAZA_v0.10.2_release-IPFS-hashes'
+gpg: Signature made Tue Oct 11 10:57:11 2016 PDT using RSA key ID 93AEC55F
+gpg: Good signature from &quot;Rob Nelson (Release Signing Key) &amp;lt;release-signing@guruvan.net&amp;gt;&quot; [full]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sun, 16 Oct 2016 12:44:33 -0700</pubDate>
+        <link>http://mazacoin.org/releases/2016/10/16/maza-v0-10-2-released/</link>
+        <guid isPermaLink="true">http://mazacoin.org/releases/2016/10/16/maza-v0-10-2-released/</guid>
+        
+        <category>feature</category>
+        
+        <category>content</category>
+        
+        
+        <category>releases</category>
+        
+      </item>
+    
+      <item>
+        <title>How to Download MAZA via IPFS</title>
+        <description>&lt;h1 id=&quot;download-maza-software&quot;&gt;Download MAZA Software&lt;/h1&gt;
+
+&lt;p&gt;This is our first full release via IPFS - we encourage you to install the ipfs client. 
+Please let us know, or submit a pull request to this site if you find these instructions difficult or lacking.&lt;/p&gt;
+
+&lt;h2 id=&quot;downloads-available-via-ipfs-or-ipfs-web-gateways&quot;&gt;Downloads available via IPFS or IPFS Web Gateways&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Desktop Application Binaries&lt;/li&gt;
+  &lt;li&gt;SHA sums&lt;/li&gt;
+  &lt;li&gt;gpg signatures&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ipfs.io/ipfs/QmeFphaDUMjMhqih5w54g5mvqKzNMibPJJ8DNehhWtaVME&quot;&gt;MAZA v0.10.2 on ipfs.io&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://mazacoin.org/ipfs/QmeFphaDUMjMhqih5w54g5mvqKzNMibPJJ8DNehhWtaVME&quot;&gt;Coming Soon MAZA v0.10.2 on mazacoin.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ipfs&quot;&gt;IPFS&lt;/h2&gt;
+
+&lt;p&gt;IPFS provides a blockchain like merkle tree based file system, which provides a more secure method of download than the mazacoin.org website. 
+There are two methods to obtain MAZA from IPFS.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;IPFS Web Gateway
+    &lt;ul&gt;
+      &lt;li&gt;Simple, only requires a web browser.&lt;/li&gt;
+      &lt;li&gt;Not as secure, web client cannot independently verify block hashes from IPFS&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;IPFS client
+    &lt;ul&gt;
+      &lt;li&gt;Most secure, client will only download the IPFS blocks referenced&lt;/li&gt;
+      &lt;li&gt;Client does not need to trust the &lt;a href=&quot;https://ipfs.io&quot;&gt;ipfs.io&lt;/a&gt; or &lt;a href=&quot;http://mazacoin.org&quot;&gt;MAZA Network Development&lt;/a&gt; gateways&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;ipfs-web-gateway-links&quot;&gt;IPFS Web Gateway links&lt;/h2&gt;
+
+&lt;h3 id=&quot;download-via-https-over-ipfsios-gatewayhttpsipfsio&quot;&gt;Download via HTTPS over &lt;a href=&quot;https://ipfs.io&quot;&gt;ipfs.io’s gateway&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ipfs.io/ipfs/QmeKkxs5XHWu4N7KsMQa8WBRYUDZEE6e8f2GqjGWaq9Vmm&quot;&gt;SHA256SUMS&lt;/a&gt; GPG: &lt;a href=&quot;https://ipfs.io/ipfs/QmSmW7wSsVhnduZybxqX36Gqu6TZTQ57NfQSzjwCwFYan2&quot;&gt;sig&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ipfs.io/ipfs/QmWuXw1dbmfjw3Dxq2RrPLUVYycGmUZ2wRvHQNeMcnn4uC&quot;&gt;Linux&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ipfs.io/ipfs/QmT1ksPxxrvktats9WkyDQrkeFHxdfq8bMeDXe7ire7zUS&quot;&gt;OSX&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ipfs.io/ipfs/QmZ3s6sqhFPaPgTHthjuEuvZP1oBGE452CmrBsGjKhF6w3&quot;&gt;Windows&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ipfs.io/ipfs/QmWndGvjSwzq2xkscgXRfnYa4uGQCuhdsB2r3k5xV24XyK&quot;&gt;Source&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ipfs-hashes&quot;&gt;IPFS Hashes&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;scroll right/left! we still need to iron out some formatting issues!&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;QmdxwG795prep6VvtNwH2wb34VopKXgA4ogGDXGN3jtZ6Z
+Qme6bopV7jjBhYfqi1KcSXDgwSiPPEbgAtrw4ou4qz2Fjp MAZA
+QmeFphaDUMjMhqih5w54g5mvqKzNMibPJJ8DNehhWtaVME MAZA/v0.10.2
+QmZ3s6sqhFPaPgTHthjuEuvZP1oBGE452CmrBsGjKhF6w3 MAZA/v0.10.2/windows
+QmWndGvjSwzq2xkscgXRfnYa4uGQCuhdsB2r3k5xV24XyK MAZA/v0.10.2/src
+QmT1ksPxxrvktats9WkyDQrkeFHxdfq8bMeDXe7ire7zUS MAZA/v0.10.2/osx
+QmWuXw1dbmfjw3Dxq2RrPLUVYycGmUZ2wRvHQNeMcnn4uC MAZA/v0.10.2/linux
+QmVXpiGnpUodZ3hh39KqKSAZfaqTPeKuBFKBsuxWSZ4arZ MAZA/v0.10.2/windows/maza-0.10.2-win64.zip.sig
+QmULhmvY5vLJ2iF5251t5aLpLa1YpA2K3JHqnjHfDCA1dG MAZA/v0.10.2/windows/maza-0.10.2-win64.zip
+QmUsRXUZu26FVsX33f2SXhQFXBtjRoBRY9RdQJ5ATzJnt3 MAZA/v0.10.2/windows/maza-0.10.2-win64-setup.exe.sig
+QmT3pD6Xm3aD6hJXkoPU92MtaCviqneXNDmW3z45oCcXHz MAZA/v0.10.2/windows/maza-0.10.2-win64-setup.exe
+QmQdCDrWo8HTeAKdoFHBJJ6AQ3FZL48aK24qLKe52dNDYQ MAZA/v0.10.2/windows/maza-0.10.2-win32.zip.sig
+QmUWeuHHrYZiEqbWpniDQ5XoV4MVzfyvYtXJbRPfeMVfQi MAZA/v0.10.2/windows/maza-0.10.2-win32.zip
+QmYyyuD5wXmdjyUG7RZ2Bjgmmqr2kSXqCk5G8eXZFMMPqK MAZA/v0.10.2/windows/maza-0.10.2-win32-setup.exe.sig
+QmX9uMr8pd5qCjxQpDEBmPZrxynVtUm2JSfHPMNCdwdhce MAZA/v0.10.2/windows/maza-0.10.2-win32-setup.exe
+QmdcfTkCrDKUAdqtv4KsgyAWJAKbKbkUXSUWgGqU1e8Jhv MAZA/v0.10.2/src/maza-0.10.2.tar.gz.sig
+QmfSNq3pBKNGy4nA9H43nKJJ8VDGdX8YJk6F86poPv6aGK MAZA/v0.10.2/src/maza-0.10.2.tar.gz
+QmYKXSv1xHuUfNsr3wx9Bjr3ipnWuzGRksQiDZTmy4NYM1 MAZA/v0.10.2/osx/maza-0.10.2-osx64.tar.gz.sig
+QmdTmQZA66U5mXtBSAKGdtruiZiEEzsRuT6ZdaQWvJ9PxQ MAZA/v0.10.2/osx/maza-0.10.2-osx64.tar.gz
+QmdaRFQSd4et1qGAxb7sJnntWfYiyWuMfeZDVKjuoiiq9S MAZA/v0.10.2/osx/maza-0.10.2-osx-unsigned.tar.gz.sig
+QmQPLEg2gepVn9wBX6Qj86Bnzbh1FPZgcY4QHqy4GYkU4U MAZA/v0.10.2/osx/maza-0.10.2-osx-unsigned.tar.gz
+QmccXm1Tk3Z9wvtsnBHNEEJbGGGcqxQ5zXgf5Xk4QmCMW4 MAZA/v0.10.2/osx/maza-0.10.2-osx-unsigned.dmg.sig
+QmZR96FRey9hRPTHWjhdu9Epf6goNjoNbHMj2NR1fetPCd MAZA/v0.10.2/osx/maza-0.10.2-osx-unsigned.dmg
+QmTzJ1AsSiMoJ7Ev7Yj6f8XbKzb3HQtkJnCXYNc52BrzWz MAZA/v0.10.2/linux/maza-0.10.2-linux64.tar.gz.sig
+QmXgLfbSnAjLgdmLTW5Qc66WUPrYDM8LxnDPaA4BGHzHwJ MAZA/v0.10.2/linux/maza-0.10.2-linux64.tar.gz
+QmQ5RnHtemwZLgc1d611Dg86vSoYJY67rSDSMY1Mow77BB MAZA/v0.10.2/linux/maza-0.10.2-linux32.tar.gz.sig
+QmQpLjyj9Bd1MuCsnNB1iQHTptwK5CZZw1Rdu5VyMrd1GG MAZA/v0.10.2/linux/maza-0.10.2-linux32.tar.gz
+QmSmW7wSsVhnduZybxqX36Gqu6TZTQ57NfQSzjwCwFYan2 MAZA/v0.10.2/SHA256SUMS.sig
+QmeKkxs5XHWu4N7KsMQa8WBRYUDZEE6e8f2GqjGWaq9Vmm MAZA/v0.10.2/SHA256SUMS
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;download-via-ipfs-client&quot;&gt;Download via IPFS client&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;install IPFS on your own machine as per instructions &lt;a href=&quot;https://ipfs.io/docs/install/&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;init the repo as shown in &lt;a href=&quot;https://ipfs.io/docs/getting-started/&quot;&gt;IPFS docs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;get the MAZA files you want!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;so-which-files-to-get-how-does-this-work&quot;&gt;So, which files to get? How does this work?&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Get the MAZA_v0.10.2_release-IPFS-hashes (and .sig),&lt;/li&gt;
+  &lt;li&gt;verify that file with gpg,&lt;/li&gt;
+  &lt;li&gt;and for example, get the OSX downloads with .dmg and .tar.gz and GPG signatures:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;my_mazamachine:$ &lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ipfs&lt;/span&gt;&lt;span class=&quot;kv&quot;&gt; get QmeFphaDUMjMhqih5w54g5mvqKzNMibPJJ8DNehhWtaVME/osx
+&lt;/span&gt;Saving file(s) to osx
+ 44.50 MB / 44.50 MB [==============================================================================================================================================]  99.99% 0s
+&lt;span class=&quot;w&quot;&gt;my_mazamachine:$ &lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ls&lt;/span&gt;&lt;span class=&quot;kv&quot;&gt;
+&lt;/span&gt;api        blocks     config     datastore  osx        repo.lock  version
+
+&lt;span class=&quot;w&quot;&gt;my_mazamachine:$ &lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ls&lt;/span&gt;&lt;span class=&quot;kv&quot;&gt; -la osx/
+&lt;/span&gt;total 45588
+drwxr-sr-x    2 root     ipfs          4096 Oct 12 15:33 .
+drwxr-sr-x    5 ipfs     ipfs          4096 Oct 12 15:33 ..
+-rw-r--r--    1 root     ipfs      11047469 Oct 12 15:33 maza-0.10.2-osx-unsigned.dmg
+-rw-r--r--    1 root     ipfs           819 Oct 12 15:33 maza-0.10.2-osx-unsigned.dmg.sig
+-rw-r--r--    1 root     ipfs      11338272 Oct 12 15:33 maza-0.10.2-osx-unsigned.tar.gz
+-rw-r--r--    1 root     ipfs           819 Oct 12 15:33 maza-0.10.2-osx-unsigned.tar.gz.sig
+-rw-r--r--    1 root     ipfs      24266978 Oct 12 15:33 maza-0.10.2-osx64.tar.gz
+-rw-r--r--    1 root     ipfs           819 Oct 12 15:33 maza-0.10.2-osx64.tar.gz.sig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Getting the entire directory ensures that you have the correct files, as well as the GPG signatures so that you can 
+verify your download.&lt;/p&gt;
+
+&lt;p&gt;You could always just get the hash for the file that you want, and download that - whether you do this via 
+ipfs client or via web, your machine will want to name your download as the hash, rather than the expected name of the file.&lt;/p&gt;
+
+&lt;h2 id=&quot;all-binaries-are-gpg-signed-and-hashed-with-sha256&quot;&gt;All binaries are gpg signed and hashed with Sha256&lt;/h2&gt;
+&lt;p&gt;### Please check hashes &amp;amp; signatures!&lt;/p&gt;
+
+&lt;p&gt;GPG fingerprint: DEF8 9BAC 042C 094F 3BA8  09A7 0750 81C3 91DC 22D1
+Rob Nelson (Release Signing Key) &lt;a href=&quot;&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#116;&amp;#111;:&amp;#114;&amp;#101;&amp;#108;&amp;#101;&amp;#097;&amp;#115;&amp;#101;&amp;#045;&amp;#115;&amp;#105;&amp;#103;&amp;#110;&amp;#105;&amp;#110;&amp;#103;&amp;#064;&amp;#103;&amp;#117;&amp;#114;&amp;#117;&amp;#118;&amp;#097;&amp;#110;&amp;#046;&amp;#110;&amp;#101;&amp;#116;&quot;&gt;&amp;#114;&amp;#101;&amp;#108;&amp;#101;&amp;#097;&amp;#115;&amp;#101;&amp;#045;&amp;#115;&amp;#105;&amp;#103;&amp;#110;&amp;#105;&amp;#110;&amp;#103;&amp;#064;&amp;#103;&amp;#117;&amp;#114;&amp;#117;&amp;#118;&amp;#097;&amp;#110;&amp;#046;&amp;#110;&amp;#101;&amp;#116;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To verify a gpg signature:&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;my_buildmachine:$ &lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;cd&lt;/span&gt;&lt;span class=&quot;kv&quot;&gt; ~/Directory_with_download
+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;my_buildmachine:$ &lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;gpg&lt;/span&gt;&lt;span class=&quot;kv&quot;&gt; --recv-keys 91DC22D1
+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;my_buildmachine:$ &lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;gpg&lt;/span&gt;&lt;span class=&quot;kv&quot;&gt; -k --fingerprint  91DC22D1
+&lt;/span&gt;pub   4096R/91DC22D1 2016-10-11
+      Key fingerprint = DEF8 9BAC 042C 094F 3BA8  09A7 0750 81C3 91DC 22D1
+uid       [  full  ] Rob Nelson (Release Signing Key) &amp;lt;release-signing@guruvan.net&amp;gt;
+sub   4096R/17BA4334 2016-10-11
+sub   4096R/93AEC55F 2016-10-11
+
+&lt;span class=&quot;w&quot;&gt;my_buildmachine:$ &lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;gpg&lt;/span&gt;&lt;span class=&quot;kv&quot;&gt; --verify MAZA_v0.10.2_release-IPFS-hashes.sig
+&lt;/span&gt;gpg: assuming signed data in 'MAZA_v0.10.2_release-IPFS-hashes'
+gpg: Signature made Tue Oct 11 10:57:11 2016 PDT using RSA key ID 93AEC55F
+gpg: Good signature from &quot;Rob Nelson (Release Signing Key) &amp;lt;release-signing@guruvan.net&amp;gt;&quot; [full]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sun, 16 Oct 2016 00:00:00 -0700</pubDate>
+        <link>http://mazacoin.org/docs/2016/10/16/downloading-maza-via-ipfs/</link>
+        <guid isPermaLink="true">http://mazacoin.org/docs/2016/10/16/downloading-maza-via-ipfs/</guid>
+        
+        <category>docs,</category>
+        
+        <category>ipfs,</category>
+        
+        <category>downloads,</category>
+        
+        <category>maza-qt</category>
+        
+        
+        <category>docs</category>
+        
+      </item>
+    
+      <item>
+        <title>Geo Visualization - Sandy and Airports</title>
+        <description>&lt;div id=&quot;map-canvas&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;ui form&quot;&gt;
+  &lt;div class=&quot;field&quot;&gt;
+    &lt;div class=&quot;ui right action input fluid&quot;&gt;
+      &lt;input type=&quot;text&quot; id=&quot;fusion-grid-filter&quot; placeholder=&quot;&quot; onchange=&quot;drawTable()&quot; /&gt;
+      &lt;div class=&quot;ui right teal mini labeled icon button&quot; onclick=&quot;drawTable()&quot;&gt;
+        &lt;i class=&quot;search icon&quot;&gt;&lt;/i&gt;
+        Filter
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;fusion-grid&quot;&gt; &lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;This app was created with “zero coding”. It is created simply from configuration, 
+using live open data sources, and reusing plugins created for OpenTheme.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;  ---
+  # App Options
+  layout: fusion
+  title: Geo Visualization - Sandy and Airports
+  description: KML Map, Fusion Grid displaying live data...
+  category: app
+
+  # Grid Options
+  select: &quot;col1, col2 as Location, col4&quot;
+  from: &quot;1hcqyroMjYXZfCqDTUq2nmhgwzG13W-BRzNXyaEk&quot;
+  filter: &quot;Location&quot;
+  
+  # KML Options
+  layers:
+    - kml: &quot;http://opentheme.co/static-data/WorldAirports.kml&quot;
+    - kml: &quot;http://opentheme.co/static-data/287257.kml&quot;
+  ---
+  
+  &lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;kml-viewer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;%}
+  {% include fusion-filter-grid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Wed, 07 Jan 2015 00:00:00 -0800</pubDate>
+        <link>http://mazacoin.org/app/2015/01/07/geo-visualization-sandy-and-airports/</link>
+        <guid isPermaLink="true">http://mazacoin.org/app/2015/01/07/geo-visualization-sandy-and-airports/</guid>
+        
+        
+        <category>app</category>
+        
+      </item>
+    
+  </channel>
+</rss>

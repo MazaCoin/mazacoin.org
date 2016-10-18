@@ -1,0 +1,488 @@
+  <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head prefix="og: http://ogp.me/ns#">
+
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <!-- Refer HTML5BP and https://developers.google.com/speed/docs/insights/ConfigureViewport -->
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  
+  <!-- Site Properities -->
+  
+  
+  <title>Geo Visualization - Sandy and Airports &middot; MAZA Network Development | MAZA</title>
+  <link rel="canonical" href="http://mazacoin.org/app/2015/01/07/geo-visualization-sandy-and-airports/">
+  
+  <!-- Open Graph. Refer https://developers.facebook.com/docs/web/tutorials/scrumptious/open-graph-object -->
+  
+  
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="http://mazacoin.org/app/2015/01/07/geo-visualization-sandy-and-airports/">
+  <meta property="og:title" content="Geo Visualization - Sandy and Airports">
+  <meta property="og:site_name" content="MAZA Network Development | MAZA">
+  <meta property="og:description" content="Cryptocurrency Network Services for Sovereign Tribes Worldwide">
+  <meta property="og:image" content="http://mazacoin.org/img/app/kml-sandy.png">
+  <meta property="og:image:width" content="640">
+  <meta property="og:image:height" content="300">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@open_theme">
+  <meta name="twitter:creator" content="@mazacoin">
+  
+  
+  <meta property="og:type" content="website" />
+  
+  
+  <meta name="description" content="Cryptocurrency Network Services for Sovereign Tribes Worldwide">
+  <meta name="keywords" content="MAZA, mazacoin, mzc, cryptocurrency, bitcoin, litecoin, monero, dogecoin, smart contract, blockchain">
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  
+  <!-- Common Styles -->
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.5.0/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+  
+  
+  <style>
+    #map-canvas {
+      width: 100%;
+      height: 450px;
+      margin-bottom: 20px;
+      padding: 0px
+    }
+
+    .controls {
+        margin-top: 16px;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      #pac-input {
+        background-color: #fff;
+        padding: 0 11px 0 13px;
+        width: 400px;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        text-overflow: ellipsis;
+      }
+
+      #pac-input:focus {
+        border-color: #4d90fe;
+        margin-left: -1px;
+        padding-left: 14px;  /* Regular padding-left + 1. */
+        width: 401px;
+      }
+
+      .pac-container {
+        font-family: Roboto;
+      }
+
+      #type-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        padding: 5px 11px 0px 11px;
+      }
+
+      #type-selector label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+  </style>  
+  </head>
+
+  <body class="global landing fusion">
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+
+    
+    <div class="ui right vertical sidebar menu">
+    <div class="item">
+      <div class="ui transparent mini icon input">
+        <input type="text" placeholder="Search..." class="menu-search">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+
+    <a class="item" href="/releases/2016/10/16/maza-v0-10-2-released/">
+    <i class="red download icon"></i>
+    Latest Release
+
+    <span class="ui blue mini label">1</span> 
+    </a>
+    <a class="item" href="/download/">
+    <i class="red download icon"></i>
+    How to Get MAZA!
+    </a>
+    <a class="item" href="/exchanges/">
+    <i class="black exchange icon"></i>
+    Buy, Sell, Accept & Spend 
+    </a>
+    <a class="item" target="_blank" href="https://github.com/mazacoin">
+    <i class="yellow github icon"></i>
+    Source Code 
+    </a>
+    <a class="item" href="/blog/">
+    <i class="comments icon"></i>
+    Tutorials & Blog
+    <span class="ui teal mini label">New</span> 
+    </a>
+   <!--
+    <a class="item" href="/embeds/">
+    <i class="wizard icon"></i>
+    Plugin Embeds <span class="ui purple mini label">10</span>
+    </a>
+    <a class="item" href="/kitchensink/">
+    <i class="block layout icon"></i>
+    Kitchen Sink
+    </a>
+    <a class="item" href="/panoramio/">
+    <i class="pin icon"></i>
+    Panoramio Map
+    </a> -->
+    <a class="item" href="/tag/">
+    <i class="tags icon"></i>
+    Tag Browser
+    </a>
+    <a class="item" href="/category/">
+    <i class="bookmark icon"></i>
+    Category List
+    </a>
+</div>
+
+    <div class="pusher">
+    
+    <!-- masthead -->
+<div class="ui masthead skulls"> <!--blue-round-gradient"> -->
+  <div class="ui page grid">
+    <div class="column">
+        
+        <div class="ui menu">
+  <a class="header item" href="/">MAZA Network</a>
+  <div class="right menu">
+    <a class="item menu-details " href="/download/" data-position="bottom left" data-content="Download MAZA"><i class="icon download"></i></a>
+    <a class="item menu-details " href="/blog/" data-position="bottom left" data-content="Tutorials and Blog"><i class="icon comments"></i></a>
+    <a class="item menu-details " href="/apps/" data-position="bottom left" data-content="MAZA Application Development"><i class="icon cube"></i></a>
+    <!-- <a class="item menu-details " href="/embeds/" data-position="bottom left" data-content="Reusable Embed Plugins"><i class="wizard icon"></i></a> -->
+    <div class="item">
+      <div class="ui transparent mini icon input">
+        <input type="text" placeholder="Search..." class="menu-search">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+    
+      <a class="mobile item pagebar" href="#"><i class="icon content"></i></a>
+      <a class="item pagebar" href="#"><i class="icon content"></i></a>
+    
+  </div>
+</div>
+
+        
+        <!-- information -->
+        <div class="ui information">
+          <img src="/img/maza-logo.png" align="right">
+          <h1 class="header-3d">Geo Visualization - Sandy and Airports</h1>
+          <h2 class="slim-header-light">KML Map, Fusion Grid displaying live data. Hurricane Sandy impact cone, world Airport locations, and busiest airports.</h2>
+        </div> 
+        <!-- /information -->
+    </div>
+  </div>
+</div>
+<!-- /masthead -->
+
+    <div class="ui vertical segment">
+      <div class="ui very relaxed stackable page grid">
+        <div class="row">
+          <div class="column">
+            <div id="map-canvas"></div>
+<div class="ui form">
+  <div class="field">
+    <div class="ui right action input fluid">
+      <input type="text" id="fusion-grid-filter" placeholder="" onchange="drawTable()" />
+      <div class="ui right teal mini labeled icon button" onclick="drawTable()">
+        <i class="search icon"></i>
+        Filter
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="fusion-grid"> </div>
+
+<p><br /></p>
+
+<p>This app was created with “zero coding”. It is created simply from configuration, 
+using live open data sources, and reusing plugins created for OpenTheme.</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></td><td class="code"><pre>  ---
+  # App Options
+  layout: fusion
+  title: Geo Visualization - Sandy and Airports
+  description: KML Map, Fusion Grid displaying live data...
+  category: app
+
+  # Grid Options
+  select: "col1, col2 as Location, col4"
+  from: "1hcqyroMjYXZfCqDTUq2nmhgwzG13W-BRzNXyaEk"
+  filter: "Location"
+  
+  # KML Options
+  layers:
+    - kml: "http://opentheme.co/static-data/WorldAirports.kml"
+    - kml: "http://opentheme.co/static-data/287257.kml"
+  ---
+  
+  <span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span><span class="na">kml-viewer</span><span class="p">.</span><span class="na">html</span><span class="w"> </span><span class="na">%}
+  {% include fusion-filter-grid</span><span class="p">.</span><span class="na">html</span><span class="w"> </span><span class="p">%}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+        <div class="ui inverted footer vertical segment">
+  <div class="ui stackable page grid">
+    <div class="ten wide column">
+      <div class="ui three column stackable grid">
+        <div class="column">
+          <h5 class="ui inverted header">Downloads</h5>
+          <div class="ui inverted link list">
+            <a class="item" target="_blank" href="https://github.com/mazacoin/">Source Code</a>
+            <a class="item" href="/download">Desktop Wallets</a>
+            <a class="item" href="/appstore/">Mobile Wallets</a>
+          </div>
+        </div>
+        <div class="column">
+          <h5 class="ui inverted header">Exchanges</h5>
+          <div class="ui inverted link list">
+            <a class="item" target="_blank" href="https://bittrex.com/Market/Index?MarketName=BTC-MZC">Bittrex MAZA/BTC</a>
+            <a class="item" target="_blank" href="https://www.cryptopia.co.nz/Exchange?market=MZC_BTC">Cryptopia MAZA/BTC</a>
+            <a class="item" target="_blank" href="https://www.cryptopia.co.nz/Exchange?market=MZC_XMR">Cryptopia MAZA/XMR</a>
+          </div>
+        </div>
+        <div class="column">
+          <h5 class="ui inverted header">GitHub</h5>
+          <div class="ui inverted link list">
+            <a class="item" target="_blank" href="https://github.com/mazacoin/maza">MAZA Network Sources</a>
+            <a class="item" target="_blank" href="https://github.com/mazacoin/mazacoin.org/fork">Develop This Site</a>
+            <a class="item" href="/blog/2016/10/16/developing-maza-network-software-sites-and-docs/">How To Develop MAZA</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="six wide column">
+      <div class="ui two column stackable grid">
+        <div class="column">
+          <h5 class="ui inverted header">Social</h5>
+          <div class="ui inverted link list">
+            <a class="item" target="_blank" href="https://twitter.com/mazacoin"><i class="twitter icon"></i> Twitter</a>
+            <a class="item" target="_blank" href="https://github.com/mazacoin"><i class="github icon"></i> GitHub</a>
+            <a class="item" href="http://mazacoin.org/feed.xml"><i class="rss icon"></i> Feed</a>
+          </div>
+        </div>
+        <div class="column">
+          <h5 class="ui inverted header">Contact Us</h5>
+          <addr>
+            <a target="_blank" href="https://kiwiirc.com/client/chat.freenode.net/?nick=maza|?&theme=cli#maza">Freenode IRC<br>
+            <a target="_blank" href="mailto:contact@mazacoin.org">Email Us</a> <br>
+          </addr>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui center aligned segment copyright">
+  <i class="world icon"></i> Copyright &copy; 2016, MAZA Network Development.
+</div>
+
+    
+    </div>
+    
+    
+    
+<!-- Cannot make async calls for jQuery or Semantic. Breaks Cards, Page Bar, others. -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.5.0/semantic.min.js"></script>
+
+<script>
+$(document)
+  .ready(function() {
+
+/*******************************
+          Global
+*******************************/
+
+   $('.menu-search').bind('change', function () {
+        var search_string = $(this).val(); // get value
+        var url = '/search/?q=' + search_string
+        if (url) { // require a URL
+            window.location = url; // redirect
+        }
+        return false;
+    });
+
+    $('.sidebar').first()
+      .sidebar('attach events', '.pagebar');
+    
+    $('.pagebar')
+      .removeClass('disabled');
+
+/*******************************
+          Cards
+*******************************/
+
+
+    $('.special.cards .image').dimmer({
+      on: 'hover'
+    });
+    
+    $('.ui.rating')
+      .rating({
+        maxRating: 5
+      });
+
+    $('.ui.rating')
+      .rating('disable');
+      
+    $('.embed-features')
+      .popup();
+
+    $('.menu-details')
+      .popup();
+
+});  
+</script>
+
+
+    <script type="text/javascript" src="//www.google.com/jsapi"></script>
+    <script type="text/javascript">google.load('visualization', '1', { packages: ['table', 'corechart'] });</script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    
+    <script>
+    /*
+      This OpenTheme.co code builds on Google sample code.
+      
+      --- Google Sample Copyright ---
+      
+      Copyright 2011 Google Inc. All Rights Reserved.
+    
+      Licensed under the Apache License, Version 2.0 (the "License");
+      you may not use this file except in compliance with the License.
+      You may obtain a copy of the License at
+    
+          http://www.apache.org/licenses/LICENSE-2.0
+    
+      Unless required by applicable law or agreed to in writing, software
+      distributed under the License is distributed on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+      See the License for the specific language governing permissions and
+      limitations under the License.
+    */
+        
+    
+    function initialize() {
+
+      var map = new google.maps.Map(document.getElementById('map-canvas'));
+    
+      var kml_layer = "";
+      
+
+      kml_layer = new google.maps.KmlLayer({
+        url: 'http://opentheme.co/static-data/WorldAirports.kml'
+      });
+      kml_layer.setMap(map);
+
+      
+
+      kml_layer = new google.maps.KmlLayer({
+        url: 'http://opentheme.co/static-data/287257.kml'
+      });
+      kml_layer.setMap(map);
+
+      
+      
+    }
+    
+    google.maps.event.addDomListener(window, 'load', initialize);
+    
+    
+    
+    
+    
+    function drawTable() {
+      var query_element = document.getElementById("fusion-grid");
+      var select = "select " + "col1, col2 as Location, col4";
+      var from = "1hcqyroMjYXZfCqDTUq2nmhgwzG13W-BRzNXyaEk";
+      var filter = "Location";
+
+      var query = select + ' FROM ' + from;
+      var filter_value = document.getElementById('fusion-grid-filter').value;
+      if (filter_value) {
+        query += " WHERE '" + filter + "' + CONTAINS IGNORING CASE + '" + filter_value + "'";
+      }
+      var queryText = encodeURIComponent(query);
+      var gvizQuery = new google.visualization.Query(
+          '//www.google.com/fusiontables/gvizdata?tq=' + queryText);
+    
+      gvizQuery.send(function(response) {
+        var table = new google.visualization.Table(
+            document.getElementById('fusion-grid'));
+        table.draw(response.getDataTable(), {
+          // https://developers.google.com/chart/interactive/docs/gallery/table#Configuration_Options
+          showRowNumber: true,
+          page: 'enable',
+          pageSize: 20
+        });
+      });
+      
+      
+    
+    }
+    
+    google.setOnLoadCallback(drawTable);
+
+    
+    </script>
+    
+    
+
+  </body>
+
+</html>

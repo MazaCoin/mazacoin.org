@@ -1,0 +1,426 @@
+  <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head prefix="og: http://ogp.me/ns#">
+
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <!-- Refer HTML5BP and https://developers.google.com/speed/docs/insights/ConfigureViewport -->
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  
+  <!-- Site Properities -->
+  
+  
+  <title>Developing MAZA Network Software, Sites, and Docs &middot; MAZA Network Development | MAZA</title>
+  <link rel="canonical" href="http://mazacoin.org/blog/2016/10/16/developing-maza-network-software-sites-and-docs/">
+  
+  <!-- Open Graph. Refer https://developers.facebook.com/docs/web/tutorials/scrumptious/open-graph-object -->
+  
+  
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="http://mazacoin.org/blog/2016/10/16/developing-maza-network-software-sites-and-docs/">
+  <meta property="og:title" content="Developing MAZA Network Software, Sites, and Docs">
+  <meta property="og:site_name" content="MAZA Network Development | MAZA">
+  <meta property="og:description" content="How To Contribute to MAZA Network Software, Sites, and Documentation Development">
+  <meta property="og:image" content="http://mazacoin.org/img/mazaqt-splash.png">
+  <meta property="og:image:width" content="640">
+  <meta property="og:image:height" content="300">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@open_theme">
+  <meta name="twitter:creator" content="@mazacoin">
+  
+  
+  <meta property="og:type" content="article" />
+  
+  
+  <meta name="description" content="How To Contribute to MAZA Network Software, Sites, and Documentation Development">
+  <meta name="keywords" content="contributing,, developers, blog">
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  
+  <!-- Common Styles -->
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.5.0/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+  
+  
+  <style>
+  .post .postbar {
+    margin: 0em;
+    padding: 1rem;
+  }
+  
+  .post .postbar .column {
+    margin-bottom: 1em;
+  }
+  
+  .post .image {
+    margin-bottom: 1em;
+  }
+
+  </style>
+
+  </head>
+  
+  <body class="global post">
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    
+    
+    
+    <div class="ui right vertical sidebar menu">
+    <div class="item">
+      <div class="ui transparent mini icon input">
+        <input type="text" placeholder="Search..." class="menu-search">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+
+    <a class="item" href="/releases/2016/10/16/maza-v0-10-2-released/">
+    <i class="red download icon"></i>
+    Latest Release
+
+    <span class="ui blue mini label">1</span> 
+    </a>
+    <a class="item" href="/download/">
+    <i class="red download icon"></i>
+    How to Get MAZA!
+    </a>
+    <a class="item" href="/exchanges/">
+    <i class="black exchange icon"></i>
+    Buy, Sell, Accept & Spend 
+    </a>
+    <a class="item" target="_blank" href="https://github.com/mazacoin">
+    <i class="yellow github icon"></i>
+    Source Code 
+    </a>
+    <a class="item" href="/blog/">
+    <i class="comments icon"></i>
+    Tutorials & Blog
+    <span class="ui teal mini label">New</span> 
+    </a>
+   <!--
+    <a class="item" href="/embeds/">
+    <i class="wizard icon"></i>
+    Plugin Embeds <span class="ui purple mini label">10</span>
+    </a>
+    <a class="item" href="/kitchensink/">
+    <i class="block layout icon"></i>
+    Kitchen Sink
+    </a>
+    <a class="item" href="/panoramio/">
+    <i class="pin icon"></i>
+    Panoramio Map
+    </a> -->
+    <a class="item" href="/tag/">
+    <i class="tags icon"></i>
+    Tag Browser
+    </a>
+    <a class="item" href="/category/">
+    <i class="bookmark icon"></i>
+    Category List
+    </a>
+</div>
+
+    <div class="pusher">
+    
+        <!-- posthead -->
+<div class="ui masthead segment symphony">
+  <div class="ui page grid">
+    <div class="column">
+        
+        <div class="ui menu">
+  <a class="header item" href="/">MAZA Network</a>
+  <div class="right menu">
+    <a class="item menu-details " href="/download/" data-position="bottom left" data-content="Download MAZA"><i class="icon download"></i></a>
+    <a class="item menu-details " href="/blog/" data-position="bottom left" data-content="Tutorials and Blog"><i class="icon comments"></i></a>
+    <a class="item menu-details " href="/apps/" data-position="bottom left" data-content="MAZA Application Development"><i class="icon cube"></i></a>
+    <!-- <a class="item menu-details " href="/embeds/" data-position="bottom left" data-content="Reusable Embed Plugins"><i class="wizard icon"></i></a> -->
+    <div class="item">
+      <div class="ui transparent mini icon input">
+        <input type="text" placeholder="Search..." class="menu-search">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+    
+      <a class="mobile item pagebar" href="#"><i class="icon content"></i></a>
+      <a class="item pagebar" href="#"><i class="icon content"></i></a>
+    
+  </div>
+</div>
+
+        
+        <!-- information -->
+        <div class="ui information">
+          <a href="/blog/2016/10/16/developing-maza-network-software-sites-and-docs/">
+          <h1 class="ui header">
+            Developing MAZA Network Software, Sites, and Docs
+          </h1>
+          </a>
+          <h2>How To Contribute to MAZA Network Software, Sites, and Documentation Development
+</h2>
+          <p>
+            <i class="icon calendar"></i> Oct 16, 2016
+            
+            
+            
+              <!-- Based on https://andytaylor.me/2013/04/07/reading-time/ -->
+              
+              
+               • <i class="icon clock"></i> < 1 min to read
+              
+            
+
+            
+              • <i class="icon tags"></i> 
+              
+                <a class="ui tag label mini purple" href="/tag/#contributing,">contributing,</a>
+              
+                <a class="ui tag label mini purple" href="/tag/#developers">developers</a>
+              
+            
+          </p>
+
+          
+        </div> 
+        <!-- /information -->
+    </div>
+  </div>
+</div>
+<!-- /posthead -->
+
+        <div class="ui vertical segment">
+          <div class="ui very relaxed stackable page grid">
+            
+            <div class="ten wide column">
+            
+                
+                <h1 id="how-to-contribute-to-maza-network-software-sites-and-documentation-development">How To Contribute to MAZA Network Software, Sites, and Documentation Development</h1>
+
+
+                 <!-- Pagination -->   
+<div class="ui 2 fluid basic buttons">
+   
+  <a class="ui labeled icon button" href="/releases/2016/10/16/maza-v0-10-2-released/" 
+    title="MAZA v0.10.2 Released">
+    <i class="left arrow icon"></i>
+    Previous Post
+  </a>
+   
+   
+</div>
+
+
+                
+
+            </div>
+            
+            <div class="six wide column">
+                <div class="ui segment inverted postbar dark-wood">
+
+    <div class="row">
+      <div class="column">
+        <h3 class="ui inverted header">Get MAZA news! (coming soon)</h3>
+        <div class="ui inverted divider"></div>
+        
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <h3 class="ui inverted header">Related</h3>
+        <div class="ui inverted divider"></div>
+        <div class="ui inverted animated selection list">
+  
+</div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <h3 class="ui inverted header">Tags</h3>
+        <div class="ui inverted divider"></div>
+        
+<a class="ui tag mini label orange" href="/tag/#docs,">docs, <div class="detail">1</div></a>
+
+<a class="ui tag mini label orange" href="/tag/#ipfs,">ipfs, <div class="detail">1</div></a>
+
+<a class="ui tag mini label orange" href="/tag/#downloads,">downloads, <div class="detail">1</div></a>
+
+<a class="ui tag mini label orange" href="/tag/#maza-qt">maza-qt <div class="detail">1</div></a>
+
+<a class="ui tag mini label orange" href="/tag/#feature">feature <div class="detail">1</div></a>
+
+<a class="ui tag mini label orange" href="/tag/#content">content <div class="detail">1</div></a>
+
+<a class="ui tag mini label orange" href="/tag/#contributing,">contributing, <div class="detail">1</div></a>
+
+<a class="ui tag mini label orange" href="/tag/#developers">developers <div class="detail">1</div></a>
+
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <h3 class="ui inverted header">Categories</h3>
+        <div class="ui inverted divider"></div>
+        
+  <a class="ui small label categories" href="/category/#app">app <div class="detail">1</div></a>
+
+  <a class="ui small label categories" href="/category/#docs">docs <div class="detail">1</div></a>
+
+  <a class="ui small label categories" href="/category/#releases">releases <div class="detail">1</div></a>
+
+  <a class="ui small label categories" href="/category/#blog">blog <div class="detail">1</div></a>
+
+
+      </div>
+    </div> <!-- /row -->
+</div>
+
+            </div>
+            
+          </div>
+        </div>
+        <div class="ui inverted footer vertical segment">
+  <div class="ui stackable page grid">
+    <div class="ten wide column">
+      <div class="ui three column stackable grid">
+        <div class="column">
+          <h5 class="ui inverted header">Downloads</h5>
+          <div class="ui inverted link list">
+            <a class="item" target="_blank" href="https://github.com/mazacoin/">Source Code</a>
+            <a class="item" href="/download">Desktop Wallets</a>
+            <a class="item" href="/appstore/">Mobile Wallets</a>
+          </div>
+        </div>
+        <div class="column">
+          <h5 class="ui inverted header">Exchanges</h5>
+          <div class="ui inverted link list">
+            <a class="item" target="_blank" href="https://bittrex.com/Market/Index?MarketName=BTC-MZC">Bittrex MAZA/BTC</a>
+            <a class="item" target="_blank" href="https://www.cryptopia.co.nz/Exchange?market=MZC_BTC">Cryptopia MAZA/BTC</a>
+            <a class="item" target="_blank" href="https://www.cryptopia.co.nz/Exchange?market=MZC_XMR">Cryptopia MAZA/XMR</a>
+          </div>
+        </div>
+        <div class="column">
+          <h5 class="ui inverted header">GitHub</h5>
+          <div class="ui inverted link list">
+            <a class="item" target="_blank" href="https://github.com/mazacoin/maza">MAZA Network Sources</a>
+            <a class="item" target="_blank" href="https://github.com/mazacoin/mazacoin.org/fork">Develop This Site</a>
+            <a class="item" href="/blog/2016/10/16/developing-maza-network-software-sites-and-docs/">How To Develop MAZA</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="six wide column">
+      <div class="ui two column stackable grid">
+        <div class="column">
+          <h5 class="ui inverted header">Social</h5>
+          <div class="ui inverted link list">
+            <a class="item" target="_blank" href="https://twitter.com/mazacoin"><i class="twitter icon"></i> Twitter</a>
+            <a class="item" target="_blank" href="https://github.com/mazacoin"><i class="github icon"></i> GitHub</a>
+            <a class="item" href="http://mazacoin.org/feed.xml"><i class="rss icon"></i> Feed</a>
+          </div>
+        </div>
+        <div class="column">
+          <h5 class="ui inverted header">Contact Us</h5>
+          <addr>
+            <a target="_blank" href="https://kiwiirc.com/client/chat.freenode.net/?nick=maza|?&theme=cli#maza">Freenode IRC<br>
+            <a target="_blank" href="mailto:contact@mazacoin.org">Email Us</a> <br>
+          </addr>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui center aligned segment copyright">
+  <i class="world icon"></i> Copyright &copy; 2016, MAZA Network Development.
+</div>
+
+    
+    </div> <!-- pusher -->
+    
+
+    
+<!-- Cannot make async calls for jQuery or Semantic. Breaks Cards, Page Bar, others. -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.5.0/semantic.min.js"></script>
+
+<script>
+$(document)
+  .ready(function() {
+
+/*******************************
+          Global
+*******************************/
+
+   $('.menu-search').bind('change', function () {
+        var search_string = $(this).val(); // get value
+        var url = '/search/?q=' + search_string
+        if (url) { // require a URL
+            window.location = url; // redirect
+        }
+        return false;
+    });
+
+    $('.sidebar').first()
+      .sidebar('attach events', '.pagebar');
+    
+    $('.pagebar')
+      .removeClass('disabled');
+
+/*******************************
+          Cards
+*******************************/
+
+
+    $('.special.cards .image').dimmer({
+      on: 'hover'
+    });
+    
+    $('.ui.rating')
+      .rating({
+        maxRating: 5
+      });
+
+    $('.ui.rating')
+      .rating('disable');
+      
+    $('.embed-features')
+      .popup();
+
+    $('.menu-details')
+      .popup();
+
+});  
+</script>
+
+
+
+    <script>
+    $(document).ready(function() {
+    
+      $(".time").text(function (index, value) {
+        return Math.round(parseFloat(value));
+      });
+      
+    });
+    </script>
+    
+    
+    
+    
+
+ </body>
+
+</html>

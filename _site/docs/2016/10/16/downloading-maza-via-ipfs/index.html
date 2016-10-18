@@ -1,0 +1,584 @@
+  <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head prefix="og: http://ogp.me/ns#">
+
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <!-- Refer HTML5BP and https://developers.google.com/speed/docs/insights/ConfigureViewport -->
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  
+  <!-- Site Properities -->
+  
+  
+  <title>How to Download MAZA via IPFS &middot; MAZA Network Development | MAZA</title>
+  <link rel="canonical" href="http://mazacoin.org/docs/2016/10/16/downloading-maza-via-ipfs/">
+  
+  <!-- Open Graph. Refer https://developers.facebook.com/docs/web/tutorials/scrumptious/open-graph-object -->
+  
+  
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="http://mazacoin.org/docs/2016/10/16/downloading-maza-via-ipfs/">
+  <meta property="og:title" content="How to Download MAZA via IPFS">
+  <meta property="og:site_name" content="MAZA Network Development | MAZA">
+  <meta property="og:description" content="Download MAZA Software">
+  <meta property="og:image" content="http://mazacoin.org/img/mazaqt-splash.png">
+  <meta property="og:image:width" content="640">
+  <meta property="og:image:height" content="300">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@open_theme">
+  <meta name="twitter:creator" content="@mazacoin">
+  
+  
+  <meta property="og:type" content="article" />
+  
+  
+  <meta name="description" content="Download MAZA Software">
+  <meta name="keywords" content="docs,, ipfs,, downloads,, maza-qt, docs">
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  
+  <!-- Common Styles -->
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.5.0/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+  
+  
+  <style>
+  .post .postbar {
+    margin: 0em;
+    padding: 1rem;
+  }
+  
+  .post .postbar .column {
+    margin-bottom: 1em;
+  }
+  
+  .post .image {
+    margin-bottom: 1em;
+  }
+
+  </style>
+
+  </head>
+  
+  <body class="global post">
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    
+    
+    
+    <div class="ui right vertical sidebar menu">
+    <div class="item">
+      <div class="ui transparent mini icon input">
+        <input type="text" placeholder="Search..." class="menu-search">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+
+    <a class="item" href="/releases/2016/10/16/maza-v0-10-2-released/">
+    <i class="red download icon"></i>
+    Latest Release
+
+    <span class="ui blue mini label">1</span> 
+    </a>
+    <a class="item" href="/download/">
+    <i class="red download icon"></i>
+    How to Get MAZA!
+    </a>
+    <a class="item" href="/exchanges/">
+    <i class="black exchange icon"></i>
+    Buy, Sell, Accept & Spend 
+    </a>
+    <a class="item" target="_blank" href="https://github.com/mazacoin">
+    <i class="yellow github icon"></i>
+    Source Code 
+    </a>
+    <a class="item" href="/blog/">
+    <i class="comments icon"></i>
+    Tutorials & Blog
+    <span class="ui teal mini label">New</span> 
+    </a>
+   <!--
+    <a class="item" href="/embeds/">
+    <i class="wizard icon"></i>
+    Plugin Embeds <span class="ui purple mini label">10</span>
+    </a>
+    <a class="item" href="/kitchensink/">
+    <i class="block layout icon"></i>
+    Kitchen Sink
+    </a>
+    <a class="item" href="/panoramio/">
+    <i class="pin icon"></i>
+    Panoramio Map
+    </a> -->
+    <a class="item" href="/tag/">
+    <i class="tags icon"></i>
+    Tag Browser
+    </a>
+    <a class="item" href="/category/">
+    <i class="bookmark icon"></i>
+    Category List
+    </a>
+</div>
+
+    <div class="pusher">
+    
+        <!-- posthead -->
+<div class="ui masthead segment symphony">
+  <div class="ui page grid">
+    <div class="column">
+        
+        <div class="ui menu">
+  <a class="header item" href="/">MAZA Network</a>
+  <div class="right menu">
+    <a class="item menu-details " href="/download/" data-position="bottom left" data-content="Download MAZA"><i class="icon download"></i></a>
+    <a class="item menu-details " href="/blog/" data-position="bottom left" data-content="Tutorials and Blog"><i class="icon comments"></i></a>
+    <a class="item menu-details " href="/apps/" data-position="bottom left" data-content="MAZA Application Development"><i class="icon cube"></i></a>
+    <!-- <a class="item menu-details " href="/embeds/" data-position="bottom left" data-content="Reusable Embed Plugins"><i class="wizard icon"></i></a> -->
+    <div class="item">
+      <div class="ui transparent mini icon input">
+        <input type="text" placeholder="Search..." class="menu-search">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+    
+      <a class="mobile item pagebar" href="#"><i class="icon content"></i></a>
+      <a class="item pagebar" href="#"><i class="icon content"></i></a>
+    
+  </div>
+</div>
+
+        
+        <!-- information -->
+        <div class="ui information">
+          <a href="/docs/2016/10/16/downloading-maza-via-ipfs/">
+          <h1 class="ui header">
+            How to Download MAZA via IPFS
+          </h1>
+          </a>
+          <h2>Download MAZA Software
+
+</h2>
+          <p>
+            <i class="icon calendar"></i> Oct 16, 2016
+            
+            
+            
+              <!-- Based on https://andytaylor.me/2013/04/07/reading-time/ -->
+              
+              
+               • <i class="icon clock"></i> ~ <span class="time">3</span> min to read
+              
+            
+
+            
+              • <i class="icon tags"></i> 
+              
+                <a class="ui tag label mini purple" href="/tag/#docs,">docs,</a>
+              
+                <a class="ui tag label mini purple" href="/tag/#ipfs,">ipfs,</a>
+              
+                <a class="ui tag label mini purple" href="/tag/#downloads,">downloads,</a>
+              
+                <a class="ui tag label mini purple" href="/tag/#maza-qt">maza-qt</a>
+              
+            
+          </p>
+
+          
+        </div> 
+        <!-- /information -->
+    </div>
+  </div>
+</div>
+<!-- /posthead -->
+
+        <div class="ui vertical segment">
+          <div class="ui very relaxed stackable page grid">
+            
+            <div class="ten wide column">
+            
+                
+                <h1 id="download-maza-software">Download MAZA Software</h1>
+
+<p>This is our first full release via IPFS - we encourage you to install the ipfs client. 
+Please let us know, or submit a pull request to this site if you find these instructions difficult or lacking.</p>
+
+<h2 id="downloads-available-via-ipfs-or-ipfs-web-gateways">Downloads available via IPFS or IPFS Web Gateways</h2>
+<ul>
+  <li>Desktop Application Binaries</li>
+  <li>SHA sums</li>
+  <li>gpg signatures</li>
+</ul>
+
+<p><a href="https://ipfs.io/ipfs/QmeFphaDUMjMhqih5w54g5mvqKzNMibPJJ8DNehhWtaVME">MAZA v0.10.2 on ipfs.io</a></p>
+
+<p><a href="https://mazacoin.org/ipfs/QmeFphaDUMjMhqih5w54g5mvqKzNMibPJJ8DNehhWtaVME">Coming Soon MAZA v0.10.2 on mazacoin.org</a></p>
+
+<h2 id="ipfs">IPFS</h2>
+
+<p>IPFS provides a blockchain like merkle tree based file system, which provides a more secure method of download than the mazacoin.org website. 
+There are two methods to obtain MAZA from IPFS.</p>
+
+<ol>
+  <li>IPFS Web Gateway
+    <ul>
+      <li>Simple, only requires a web browser.</li>
+      <li>Not as secure, web client cannot independently verify block hashes from IPFS</li>
+    </ul>
+  </li>
+  <li>IPFS client
+    <ul>
+      <li>Most secure, client will only download the IPFS blocks referenced</li>
+      <li>Client does not need to trust the <a href="https://ipfs.io">ipfs.io</a> or <a href="http://mazacoin.org">MAZA Network Development</a> gateways</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="ipfs-web-gateway-links">IPFS Web Gateway links</h2>
+
+<h3 id="download-via-https-over-ipfsios-gatewayhttpsipfsio">Download via HTTPS over <a href="https://ipfs.io">ipfs.io’s gateway</a></h3>
+
+<p><a href="https://ipfs.io/ipfs/QmeKkxs5XHWu4N7KsMQa8WBRYUDZEE6e8f2GqjGWaq9Vmm">SHA256SUMS</a> GPG: <a href="https://ipfs.io/ipfs/QmSmW7wSsVhnduZybxqX36Gqu6TZTQ57NfQSzjwCwFYan2">sig</a></p>
+
+<p><a href="https://ipfs.io/ipfs/QmWuXw1dbmfjw3Dxq2RrPLUVYycGmUZ2wRvHQNeMcnn4uC">Linux</a></p>
+
+<p><a href="https://ipfs.io/ipfs/QmT1ksPxxrvktats9WkyDQrkeFHxdfq8bMeDXe7ire7zUS">OSX</a></p>
+
+<p><a href="https://ipfs.io/ipfs/QmZ3s6sqhFPaPgTHthjuEuvZP1oBGE452CmrBsGjKhF6w3">Windows</a></p>
+
+<p><a href="https://ipfs.io/ipfs/QmWndGvjSwzq2xkscgXRfnYa4uGQCuhdsB2r3k5xV24XyK">Source</a></p>
+
+<h2 id="ipfs-hashes">IPFS Hashes</h2>
+<p><em>scroll right/left! we still need to iron out some formatting issues!</em></p>
+
+<div class="language-console highlighter-rouge"><pre class="highlight"><code>QmdxwG795prep6VvtNwH2wb34VopKXgA4ogGDXGN3jtZ6Z
+Qme6bopV7jjBhYfqi1KcSXDgwSiPPEbgAtrw4ou4qz2Fjp MAZA
+QmeFphaDUMjMhqih5w54g5mvqKzNMibPJJ8DNehhWtaVME MAZA/v0.10.2
+QmZ3s6sqhFPaPgTHthjuEuvZP1oBGE452CmrBsGjKhF6w3 MAZA/v0.10.2/windows
+QmWndGvjSwzq2xkscgXRfnYa4uGQCuhdsB2r3k5xV24XyK MAZA/v0.10.2/src
+QmT1ksPxxrvktats9WkyDQrkeFHxdfq8bMeDXe7ire7zUS MAZA/v0.10.2/osx
+QmWuXw1dbmfjw3Dxq2RrPLUVYycGmUZ2wRvHQNeMcnn4uC MAZA/v0.10.2/linux
+QmVXpiGnpUodZ3hh39KqKSAZfaqTPeKuBFKBsuxWSZ4arZ MAZA/v0.10.2/windows/maza-0.10.2-win64.zip.sig
+QmULhmvY5vLJ2iF5251t5aLpLa1YpA2K3JHqnjHfDCA1dG MAZA/v0.10.2/windows/maza-0.10.2-win64.zip
+QmUsRXUZu26FVsX33f2SXhQFXBtjRoBRY9RdQJ5ATzJnt3 MAZA/v0.10.2/windows/maza-0.10.2-win64-setup.exe.sig
+QmT3pD6Xm3aD6hJXkoPU92MtaCviqneXNDmW3z45oCcXHz MAZA/v0.10.2/windows/maza-0.10.2-win64-setup.exe
+QmQdCDrWo8HTeAKdoFHBJJ6AQ3FZL48aK24qLKe52dNDYQ MAZA/v0.10.2/windows/maza-0.10.2-win32.zip.sig
+QmUWeuHHrYZiEqbWpniDQ5XoV4MVzfyvYtXJbRPfeMVfQi MAZA/v0.10.2/windows/maza-0.10.2-win32.zip
+QmYyyuD5wXmdjyUG7RZ2Bjgmmqr2kSXqCk5G8eXZFMMPqK MAZA/v0.10.2/windows/maza-0.10.2-win32-setup.exe.sig
+QmX9uMr8pd5qCjxQpDEBmPZrxynVtUm2JSfHPMNCdwdhce MAZA/v0.10.2/windows/maza-0.10.2-win32-setup.exe
+QmdcfTkCrDKUAdqtv4KsgyAWJAKbKbkUXSUWgGqU1e8Jhv MAZA/v0.10.2/src/maza-0.10.2.tar.gz.sig
+QmfSNq3pBKNGy4nA9H43nKJJ8VDGdX8YJk6F86poPv6aGK MAZA/v0.10.2/src/maza-0.10.2.tar.gz
+QmYKXSv1xHuUfNsr3wx9Bjr3ipnWuzGRksQiDZTmy4NYM1 MAZA/v0.10.2/osx/maza-0.10.2-osx64.tar.gz.sig
+QmdTmQZA66U5mXtBSAKGdtruiZiEEzsRuT6ZdaQWvJ9PxQ MAZA/v0.10.2/osx/maza-0.10.2-osx64.tar.gz
+QmdaRFQSd4et1qGAxb7sJnntWfYiyWuMfeZDVKjuoiiq9S MAZA/v0.10.2/osx/maza-0.10.2-osx-unsigned.tar.gz.sig
+QmQPLEg2gepVn9wBX6Qj86Bnzbh1FPZgcY4QHqy4GYkU4U MAZA/v0.10.2/osx/maza-0.10.2-osx-unsigned.tar.gz
+QmccXm1Tk3Z9wvtsnBHNEEJbGGGcqxQ5zXgf5Xk4QmCMW4 MAZA/v0.10.2/osx/maza-0.10.2-osx-unsigned.dmg.sig
+QmZR96FRey9hRPTHWjhdu9Epf6goNjoNbHMj2NR1fetPCd MAZA/v0.10.2/osx/maza-0.10.2-osx-unsigned.dmg
+QmTzJ1AsSiMoJ7Ev7Yj6f8XbKzb3HQtkJnCXYNc52BrzWz MAZA/v0.10.2/linux/maza-0.10.2-linux64.tar.gz.sig
+QmXgLfbSnAjLgdmLTW5Qc66WUPrYDM8LxnDPaA4BGHzHwJ MAZA/v0.10.2/linux/maza-0.10.2-linux64.tar.gz
+QmQ5RnHtemwZLgc1d611Dg86vSoYJY67rSDSMY1Mow77BB MAZA/v0.10.2/linux/maza-0.10.2-linux32.tar.gz.sig
+QmQpLjyj9Bd1MuCsnNB1iQHTptwK5CZZw1Rdu5VyMrd1GG MAZA/v0.10.2/linux/maza-0.10.2-linux32.tar.gz
+QmSmW7wSsVhnduZybxqX36Gqu6TZTQ57NfQSzjwCwFYan2 MAZA/v0.10.2/SHA256SUMS.sig
+QmeKkxs5XHWu4N7KsMQa8WBRYUDZEE6e8f2GqjGWaq9Vmm MAZA/v0.10.2/SHA256SUMS
+</code></pre>
+</div>
+
+<h3 id="download-via-ipfs-client">Download via IPFS client</h3>
+
+<ol>
+  <li>install IPFS on your own machine as per instructions <a href="https://ipfs.io/docs/install/">here</a></li>
+  <li>init the repo as shown in <a href="https://ipfs.io/docs/getting-started/">IPFS docs</a></li>
+  <li>get the MAZA files you want!</li>
+</ol>
+
+<h3 id="so-which-files-to-get-how-does-this-work">So, which files to get? How does this work?</h3>
+
+<ol>
+  <li>Get the MAZA_v0.10.2_release-IPFS-hashes (and .sig),</li>
+  <li>verify that file with gpg,</li>
+  <li>and for example, get the OSX downloads with .dmg and .tar.gz and GPG signatures:</li>
+</ol>
+
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">my_mazamachine:$ </span><span class="nc">ipfs</span><span class="kv"> get QmeFphaDUMjMhqih5w54g5mvqKzNMibPJJ8DNehhWtaVME/osx
+</span>Saving file(s) to osx
+ 44.50 MB / 44.50 MB [==============================================================================================================================================]  99.99% 0s
+<span class="w">my_mazamachine:$ </span><span class="nc">ls</span><span class="kv">
+</span>api        blocks     config     datastore  osx        repo.lock  version
+
+<span class="w">my_mazamachine:$ </span><span class="nc">ls</span><span class="kv"> -la osx/
+</span>total 45588
+drwxr-sr-x    2 root     ipfs          4096 Oct 12 15:33 .
+drwxr-sr-x    5 ipfs     ipfs          4096 Oct 12 15:33 ..
+-rw-r--r--    1 root     ipfs      11047469 Oct 12 15:33 maza-0.10.2-osx-unsigned.dmg
+-rw-r--r--    1 root     ipfs           819 Oct 12 15:33 maza-0.10.2-osx-unsigned.dmg.sig
+-rw-r--r--    1 root     ipfs      11338272 Oct 12 15:33 maza-0.10.2-osx-unsigned.tar.gz
+-rw-r--r--    1 root     ipfs           819 Oct 12 15:33 maza-0.10.2-osx-unsigned.tar.gz.sig
+-rw-r--r--    1 root     ipfs      24266978 Oct 12 15:33 maza-0.10.2-osx64.tar.gz
+-rw-r--r--    1 root     ipfs           819 Oct 12 15:33 maza-0.10.2-osx64.tar.gz.sig
+</code></pre>
+</div>
+<p>Getting the entire directory ensures that you have the correct files, as well as the GPG signatures so that you can 
+verify your download.</p>
+
+<p>You could always just get the hash for the file that you want, and download that - whether you do this via 
+ipfs client or via web, your machine will want to name your download as the hash, rather than the expected name of the file.</p>
+
+<h2 id="all-binaries-are-gpg-signed-and-hashed-with-sha256">All binaries are gpg signed and hashed with Sha256</h2>
+<p>### Please check hashes &amp; signatures!</p>
+
+<p>GPG fingerprint: DEF8 9BAC 042C 094F 3BA8  09A7 0750 81C3 91DC 22D1
+Rob Nelson (Release Signing Key) <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#114;&#101;&#108;&#101;&#097;&#115;&#101;&#045;&#115;&#105;&#103;&#110;&#105;&#110;&#103;&#064;&#103;&#117;&#114;&#117;&#118;&#097;&#110;&#046;&#110;&#101;&#116;">&#114;&#101;&#108;&#101;&#097;&#115;&#101;&#045;&#115;&#105;&#103;&#110;&#105;&#110;&#103;&#064;&#103;&#117;&#114;&#117;&#118;&#097;&#110;&#046;&#110;&#101;&#116;</a></p>
+
+<p>To verify a gpg signature:</p>
+
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">my_buildmachine:$ </span><span class="nc">cd</span><span class="kv"> ~/Directory_with_download
+</span><span class="w">my_buildmachine:$ </span><span class="nc">gpg</span><span class="kv"> --recv-keys 91DC22D1
+</span><span class="w">my_buildmachine:$ </span><span class="nc">gpg</span><span class="kv"> -k --fingerprint  91DC22D1
+</span>pub   4096R/91DC22D1 2016-10-11
+      Key fingerprint = DEF8 9BAC 042C 094F 3BA8  09A7 0750 81C3 91DC 22D1
+uid       [  full  ] Rob Nelson (Release Signing Key) &lt;release-signing@guruvan.net&gt;
+sub   4096R/17BA4334 2016-10-11
+sub   4096R/93AEC55F 2016-10-11
+
+<span class="w">my_buildmachine:$ </span><span class="nc">gpg</span><span class="kv"> --verify MAZA_v0.10.2_release-IPFS-hashes.sig
+</span>gpg: assuming signed data in 'MAZA_v0.10.2_release-IPFS-hashes'
+gpg: Signature made Tue Oct 11 10:57:11 2016 PDT using RSA key ID 93AEC55F
+gpg: Good signature from "Rob Nelson (Release Signing Key) &lt;release-signing@guruvan.net&gt;" [full]
+</code></pre>
+</div>
+
+
+                 <!-- Pagination -->   
+<div class="ui 2 fluid basic buttons">
+   
+  <a class="ui labeled icon button" href="/app/2015/01/07/geo-visualization-sandy-and-airports/" 
+    title="Geo Visualization - Sandy and Airports">
+    <i class="left arrow icon"></i>
+    Previous Post
+  </a>
+   
+   
+  <a class="ui right labeled icon button" href="/releases/2016/10/16/maza-v0-10-2-released/" 
+    title="MAZA v0.10.2 Released">
+    <i class="right arrow icon"></i>
+    Next Post
+  </a>
+   
+</div>
+
+
+                
+
+            </div>
+            
+            <div class="six wide column">
+                <div class="ui segment inverted postbar dark-wood">
+
+    <div class="row">
+      <div class="column">
+        <h3 class="ui inverted header">Get MAZA news! (coming soon)</h3>
+        <div class="ui inverted divider"></div>
+        
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <h3 class="ui inverted header">Related</h3>
+        <div class="ui inverted divider"></div>
+        <div class="ui inverted animated selection list">
+  
+</div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <h3 class="ui inverted header">Tags</h3>
+        <div class="ui inverted divider"></div>
+        
+<a class="ui tag mini label orange" href="/tag/#docs,">docs, <div class="detail">1</div></a>
+
+<a class="ui tag mini label orange" href="/tag/#ipfs,">ipfs, <div class="detail">1</div></a>
+
+<a class="ui tag mini label orange" href="/tag/#downloads,">downloads, <div class="detail">1</div></a>
+
+<a class="ui tag mini label orange" href="/tag/#maza-qt">maza-qt <div class="detail">1</div></a>
+
+<a class="ui tag mini label orange" href="/tag/#feature">feature <div class="detail">1</div></a>
+
+<a class="ui tag mini label orange" href="/tag/#content">content <div class="detail">1</div></a>
+
+<a class="ui tag mini label orange" href="/tag/#contributing,">contributing, <div class="detail">1</div></a>
+
+<a class="ui tag mini label orange" href="/tag/#developers">developers <div class="detail">1</div></a>
+
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <h3 class="ui inverted header">Categories</h3>
+        <div class="ui inverted divider"></div>
+        
+  <a class="ui small label categories" href="/category/#app">app <div class="detail">1</div></a>
+
+  <a class="ui small label categories" href="/category/#docs">docs <div class="detail">1</div></a>
+
+  <a class="ui small label categories" href="/category/#releases">releases <div class="detail">1</div></a>
+
+  <a class="ui small label categories" href="/category/#blog">blog <div class="detail">1</div></a>
+
+
+      </div>
+    </div> <!-- /row -->
+</div>
+
+            </div>
+            
+          </div>
+        </div>
+        <div class="ui inverted footer vertical segment">
+  <div class="ui stackable page grid">
+    <div class="ten wide column">
+      <div class="ui three column stackable grid">
+        <div class="column">
+          <h5 class="ui inverted header">Downloads</h5>
+          <div class="ui inverted link list">
+            <a class="item" target="_blank" href="https://github.com/mazacoin/">Source Code</a>
+            <a class="item" href="/download">Desktop Wallets</a>
+            <a class="item" href="/appstore/">Mobile Wallets</a>
+          </div>
+        </div>
+        <div class="column">
+          <h5 class="ui inverted header">Exchanges</h5>
+          <div class="ui inverted link list">
+            <a class="item" target="_blank" href="https://bittrex.com/Market/Index?MarketName=BTC-MZC">Bittrex MAZA/BTC</a>
+            <a class="item" target="_blank" href="https://www.cryptopia.co.nz/Exchange?market=MZC_BTC">Cryptopia MAZA/BTC</a>
+            <a class="item" target="_blank" href="https://www.cryptopia.co.nz/Exchange?market=MZC_XMR">Cryptopia MAZA/XMR</a>
+          </div>
+        </div>
+        <div class="column">
+          <h5 class="ui inverted header">GitHub</h5>
+          <div class="ui inverted link list">
+            <a class="item" target="_blank" href="https://github.com/mazacoin/maza">MAZA Network Sources</a>
+            <a class="item" target="_blank" href="https://github.com/mazacoin/mazacoin.org/fork">Develop This Site</a>
+            <a class="item" href="/blog/2016/10/16/developing-maza-network-software-sites-and-docs/">How To Develop MAZA</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="six wide column">
+      <div class="ui two column stackable grid">
+        <div class="column">
+          <h5 class="ui inverted header">Social</h5>
+          <div class="ui inverted link list">
+            <a class="item" target="_blank" href="https://twitter.com/mazacoin"><i class="twitter icon"></i> Twitter</a>
+            <a class="item" target="_blank" href="https://github.com/mazacoin"><i class="github icon"></i> GitHub</a>
+            <a class="item" href="http://mazacoin.org/feed.xml"><i class="rss icon"></i> Feed</a>
+          </div>
+        </div>
+        <div class="column">
+          <h5 class="ui inverted header">Contact Us</h5>
+          <addr>
+            <a target="_blank" href="https://kiwiirc.com/client/chat.freenode.net/?nick=maza|?&theme=cli#maza">Freenode IRC<br>
+            <a target="_blank" href="mailto:contact@mazacoin.org">Email Us</a> <br>
+          </addr>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui center aligned segment copyright">
+  <i class="world icon"></i> Copyright &copy; 2016, MAZA Network Development.
+</div>
+
+    
+    </div> <!-- pusher -->
+    
+
+    
+<!-- Cannot make async calls for jQuery or Semantic. Breaks Cards, Page Bar, others. -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.5.0/semantic.min.js"></script>
+
+<script>
+$(document)
+  .ready(function() {
+
+/*******************************
+          Global
+*******************************/
+
+   $('.menu-search').bind('change', function () {
+        var search_string = $(this).val(); // get value
+        var url = '/search/?q=' + search_string
+        if (url) { // require a URL
+            window.location = url; // redirect
+        }
+        return false;
+    });
+
+    $('.sidebar').first()
+      .sidebar('attach events', '.pagebar');
+    
+    $('.pagebar')
+      .removeClass('disabled');
+
+/*******************************
+          Cards
+*******************************/
+
+
+    $('.special.cards .image').dimmer({
+      on: 'hover'
+    });
+    
+    $('.ui.rating')
+      .rating({
+        maxRating: 5
+      });
+
+    $('.ui.rating')
+      .rating('disable');
+      
+    $('.embed-features')
+      .popup();
+
+    $('.menu-details')
+      .popup();
+
+});  
+</script>
+
+
+
+    <script>
+    $(document).ready(function() {
+    
+      $(".time").text(function (index, value) {
+        return Math.round(parseFloat(value));
+      });
+      
+    });
+    </script>
+    
+    
+    
+    
+
+ </body>
+
+</html>
