@@ -1,0 +1,56 @@
+<div class="ui inverted footer vertical segment">
+  <div class="ui stackable page grid">
+    <div class="ten wide column">
+      <div class="ui three column stackable grid">
+        <div class="column">
+          <h5 class="ui inverted header">Downloads</h5>
+          <div class="ui inverted link list">
+            <a class="item" target="_blank" href="https://github.com/mazacoin/">Source Code</a>
+            <a class="item" href="/download">Desktop Wallets</a>
+            <a class="item" href="/appstore/">Mobile Wallets</a>
+          </div>
+        </div>
+        <div class="column">
+          <h5 class="ui inverted header">Exchanges</h5>
+          <div class="ui inverted link list">
+            <a class="item" target="_blank" href="https://bittrex.com/Market/Index?MarketName=BTC-MZC">Bittrex MAZA/BTC</a>
+            <a class="item" target="_blank" href="https://www.cryptopia.co.nz/Exchange?market=MZC_BTC">Cryptopia MAZA/BTC</a>
+            <a class="item" target="_blank" href="https://www.cryptopia.co.nz/Exchange?market=MZC_XMR">Cryptopia MAZA/XMR</a>
+          </div>
+        </div>
+        <div class="column">
+          <h5 class="ui inverted header">GitHub</h5>
+          <div class="ui inverted link list">
+            <a class="item" target="_blank" href="https://github.com/mazacoin/maza">MAZA Network Sources</a>
+            <a class="item" target="_blank" href="https://github.com/mazacoin/mazacoin.org/fork">Develop This Site</a>
+            <a class="item" href="{% post_url /blog/2016-10-16-developing-maza-network-software-sites-and-docs %}">How To Develop MAZA</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="six wide column">
+      <div class="ui two column stackable grid">
+        <div class="column">
+          <h5 class="ui inverted header">Social</h5>
+          <div class="ui inverted link list">
+            <a class="item" target="_blank" href="https://twitter.com/{{ site.twitter_username }}"><i class="twitter icon"></i> Twitter</a>
+            <a class="item" target="_blank" href="https://github.com/{{ site.github_username }}"><i class="github icon"></i> GitHub</a>
+            <a class="item" href="{{ site.url }}/feed.xml"><i class="rss icon"></i> Feed</a>
+          </div>
+        </div>
+        <div class="column">
+          <h5 class="ui inverted header">Contact Us</h5>
+          <addr>
+            <a target="_blank" href="https://kiwiirc.com/client/chat.freenode.net/?nick=maza|?&theme=cli#maza">Freenode IRC<br>
+            <a target="_blank" href="mailto:contact@mazacoin.org">Email Us</a> <br>
+          </addr>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui center aligned segment copyright">
+  <i class="world icon"></i> Copyright &copy; {{ site.time | date: "%Y" }}, {{ site.copyright }}.
+</div>
