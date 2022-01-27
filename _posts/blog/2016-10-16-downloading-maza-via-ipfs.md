@@ -7,6 +7,13 @@ tags: docs, ipfs, downloads, maza-qt
 
 # Download MAZA Software
 
+<br>
+<mark>edited 26 January 2022</mark><br>
+<mark>This version has been deprecated.</mark><br>
+<b><em>Please download the <a href="/releases/2022/01/13/maza-v0-16-3-released/">latest release</a></em></b><br>
+<br>
+
+
 This is our first full release via IPFS - we encourage you to install the ipfs client. 
 Please let us know, or submit a pull request to this site if you find these instructions difficult or lacking. 
 
