@@ -8,6 +8,13 @@ image: /img/mazaqt-splash.png
 
 ---
 
+
+<mark>edited 26 January 2022</mark><br>
+<mark>This version has been deprecated.</mark><br>
+<b><em>Please download the <a href="/releases/2022/01/13/maza-v0-16-3-released/">latest release</a></em></b><br>
+<br>
+
+
 # MAZA v0.10.2 
 
 MAZA-qt and mazad v0.10.2 are now available. 
