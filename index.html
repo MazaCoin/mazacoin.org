@@ -26,62 +26,65 @@
 	<meta name="msapplication-square310x310logo" content="images/favicon/mstile-310x310.png">
 	<meta name="msapplication-TileColor" content="[HEXFARBE (z.B. #000000)]">	
 <style>
-  html{
-    scroll-behavior: smooth;
-  }
-  body{
-    background-color: #fcfcfc;
-    color: #000;
-  }
-  body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-  body, html {
-    height: 100%;
-    line-height: 1.8;
-  }
+  html {
+  scroll-behavior: smooth;
+}
 
-  .dark-mode-a {
-    background-color: #3f3f3f;
-    color: #f1f1f1;
-  }
+body {
+  background-color: #fcfcfc;
+  color: #000;
+  font-family: "Lato", sans-serif;
+  height: 100%;
+  line-height: 1.8;
+}
 
-  /* Create a Parallax Effect */
+.dark-mode-a {
+  background-color: #3f3f3f;
+  color: #f1f1f1;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('./images/bison-splash-1014x800.jpg');
+  min-height: 100%;
+  background-color: #3f3f3f;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("./images/goldcoin.png");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("./images/photo_2022-02-10_16-06-25.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {
+  letter-spacing: 10px;
+}
+
+.w3-hover-opacity {
+  cursor: pointer;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-width: 1600px) {
   .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  /* First image (Logo. Full height) /w3images/parallax1.jpg*/
-  .bgimg-1 {
-    background-image: url('./images/bison-splash-1014x800.jpg');
-    min-height: 100%;
-    background-color: #3f3f3f;
-  }
-
-  /* Second image (Portfolio) */
-  .bgimg-2 {
-    background-image: url("./images/goldcoin.png");
+    background-attachment: scroll;
     min-height: 400px;
   }
-
-  /* Third image (Contact) */
-  .bgimg-3 {
-    background-image: url("./images/photo_2022-02-10_16-06-25.jpg");
-    min-height: 400px; /* mazatribe.DIWYRGnWAAAKbkY.jpg hive_background_flash.png*/
-  }
-
-  .w3-wide {letter-spacing: 10px;}
-  .w3-hover-opacity {cursor: pointer;}
-
-  /* Turn off parallax scrolling for tablets and phones */
-  @media only screen and (max-width: 1600px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-      background-attachment: scroll;
-      min-height: 400px;
-    }
-  }
-
+}
 </style>
 
 
