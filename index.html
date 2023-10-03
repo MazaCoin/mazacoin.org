@@ -9,7 +9,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./css/w3.css">
 <link rel="stylesheet" href="./css/Lato.css">
-<link rel="stylesheet" href="./css/font-awesome.min.css">
+<!--- <link rel="stylesheet" href="./css/font-awesome.min.css"> --->
+<!-- our project needs Font Awesome Solid + Brands -->
+  <link href="./css/font-awesome/css/fontawesome.min.css" rel="stylesheet">
+  <link href="./css/font-awesome/css/brands.min.css" rel="stylesheet">
+   <link href="./css/font-awesome/css/regular.min.css" rel="stylesheet">
+  <link href="./css/font-awesome/css/solid.min.css" rel="stylesheet">
 
 <!-- Favicons
 	================================================== -->
@@ -90,16 +95,17 @@ body, html {
 <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
+      <i class="fa-solid fa-bars"></i>
     </a>
    <!--  <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a> -->
     <a href="#home" class="w3-bar-item"><img src="images/mazacoin-flat-bright-saturated.64.png" width="28" height="28" alt="Maza logo"></a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-map"></i> ROADMAP</a><!-- fa-user -->
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa-solid fa-map"></i> ROADMAP</a><!-- fa-user -->
 	<a href="#wallets" class="w3-bar-item w3-button w3-hide-small"><!-- <i class="fa fa-download"></i> --> WALLETS</a>
 	<a href="#mining" class="w3-bar-item w3-button w3-hide-small">MINING</a>
 	<a href="#news" class="w3-bar-item w3-button w3-hide-small"><!-- <i class="fa fa-rocket"></i> --> NEWS</a>
+	<a href="#findus" class="w3-bar-item w3-button w3-hide-small"><!-- <i class="fa fa-rocket"></i> --> SOCIAL</a>
     <a href="javascript:void(0);" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-yellow" onclick="toggleDark()">
-      <i class="fa fa-moon-o"></i>
+      <i class="fa-regular fa-moon"></i>
     </a>
 	<img src="images/MAZAword_Transparent365x155.png" alt="Maza Tribe" height="32" class="w3-display-middle w3-hide-medium">
   </div>
@@ -110,6 +116,7 @@ body, html {
 	<a href="#wallets" class="w3-bar-item w3-button" onclick="toggleFunction()">WALLETS</a>
 	<a href="#mining" class="w3-bar-item w3-button" onclick="toggleFunction()">MINING</a>
 	<a href="#news" class="w3-bar-item w3-button" onclick="toggleFunction()">NEWS</a>
+	<a href="#findus" class="w3-bar-item w3-button" onclick="toggleFunction()">SOCIAL</a>
   </div>
 </div>
 
@@ -118,7 +125,7 @@ body, html {
 	<div class="w3-quarter w3-display-right">
 		<span class="w3-padding-large w3-xlarge w3-wide w3-animate-opacity w3-hide-medium w3-hide-small">
 			<strong><br>coin for<br>sovereign<br>tribes</strong><br>
-			&nbsp;&nbsp;&nbsp;<a href="#about"><i class="fa fa-caret-square-o-down w3-hover-text-red"></i></a>
+			&nbsp;&nbsp;&nbsp;<a href="#about"><i class="fa-regular fa-caret-square-down w3-hover-text-red"></i></a>
 		</span>
 	</div>
   <div class="w3-half w3-display-bottomleft" style="white-space:nowrap;"><!-- w3-display-middle -->
@@ -153,7 +160,7 @@ body, html {
   
   <p class="w3-large w3-center w3-padding-16">MAZA use and projects</p>
   
-  <p class="w3-wide"><i class="fa fa-money"></i>Money</p>
+  <p class="w3-wide"><i class="fa-regular fa-money-bill-1"></i>Money</p>
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%"><!-- 90% --></div>
 	<ul>
@@ -164,7 +171,7 @@ body, html {
 	<br>
   </div>
 	
-  <p class="w3-wide"><i class="fa fa-vcard"></i>Permanant Storage</p>
+  <p class="w3-wide"><i class="fa-solid fa-address-card"></i>Permanant Storage</p>
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%">People have been etching information into the MAZA blockchain using Apertus.</div><!-- 85% --> 
 	<ul>
@@ -176,7 +183,7 @@ body, html {
 	<br>
   </div>
   
-  <p class="w3-wide"><i class="fa fa-handshake-o"></i>Services and Apps</p>
+  <p class="w3-wide"><i class="fa-regular fa-handshake"></i>Services and Apps</p>
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%"></div>
 	<ul>
@@ -224,13 +231,18 @@ body, html {
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
   	<div class="w3-col m3">
+      <img src="./images/news/Add-Coin-Maza.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Servers added for redundancy and to support being added to Komodo Mobile Wallet">
+	  <p>Servers added for redundancy and to support being added to Komodo Mobile Wallet<br>September 2023</p>
+    </div>
+	
+  	<div class="w3-col m3">
       <a href="https://twitter.com/HarrisPayu/status/1578442642152919041"><img src="./images/news/payu-tweet-oct2022.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Tribal Chairmans Association - October 2022"></a>
 	  <p>Tribal Chairmans Assoc.<br>October 2022</p>
     </div>
 	
     <div class="w3-col m3">
       <a href=" https://www.technologyreview.com/2022/04/27/1049573/mazacoin-indigenous-digital-currency/"><img src="./images/news/MIT-article-thumnail.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="MazaCoin, the dream of a sovereign monetary system for indigenous people is still alive"></a>
-	  <p> MIT Technology Review<br>April 2022<br>
+	  <p>MIT Technology Review<br>April 2022<br>
 	  He created an indigenous digital currency. The dream is still alive.</p>
     </div>
 	
@@ -268,7 +280,7 @@ body, html {
 
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display=&#39;none&#39;">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa-solid fa-xmark"></i></span>
   <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
     <img src="#" alt="" id="img01" class="w3-image">
     <p id="caption" class="w3-opacity w3-large"></p>
@@ -294,7 +306,7 @@ body, html {
       <img src="./images/maza_splash.png" alt="MAZA-qt v.0.16.3.0 splash screen" class="w3-image w3-round" style="width:100%">
     </div>
     <div class="w3-col m8 w3-panel">
-	It is best to keep your MAZA in a wallet that you have control of. That is why you should first install a wallet to store your coins! Our official desktop wallet can be downloaded from github and is available for Windows, Linux and Mac.
+	It is best to keep your MAZA in a wallet that you have control of. That is why you should first install a wallet to store your coins! Our official desktop wallet can be downloaded from github and is available for Windows, Linux and Mac. There is an option to do hive mining in the official wallet.
 	<br>
 	<p><strong>MAZA CORE v.0.16.3.0 WALLET DOWNLOADS</strong></p>
 	    <ul>
@@ -310,30 +322,25 @@ body, html {
      	<li><strong><a href="https://github.com/MazaCoin/maza/releases/download/v0.16.3/maza-0.16.3-win32-setup-unsigned.exe">Mazacoin Win32 Bit</a></strong></li>
      	<li><strong><a href="https://github.com/MazaCoin/maza/releases/download/v0.16.3/maza-0.16.3-win64-setup-unsigned.exe">Mazacoin Win64 Bit</a></strong></li>
 		</ul>
-
     </div> 
   </div>  
 
-
   <div class="w3-row w3-padding-32 w3-section">
-    <div class="w3-col m4 w3-container">
-      <img src="./images/UberPay-QR.png" alt="UberPay multi-coin wallet QR code" class="w3-image w3-round" style="width:100%">
+  	<div class="w3-col m4 w3-container">
+      <img src="./images/komodo-wallet-logo_black.png" alt="Komodo Wallet logo" class="w3-image w3-round" style="width:100%">
     </div>
     <div class="w3-col m8 w3-panel">
-	   <p><strong>MOBILE WALLETS</strong></p>
-		   <ul>
-		   <li><strong><a href="./images/UberPay-QR.png">UBERPAY multi coin wallet for Android</a></strong> - scan the QR code and install. Once installed click on the mini menu up on the top left of the app then at the bottom of the slider click on the "+Coins" tab and scroll through the list to find Mazacoin and add it to your wallet.</li>
-			<li><strong>atomicDEX non-custodial wallet for IOS and Android</strong> - Coming Soon!!</li>
-		   </ul>
-    </div>  
+	The Komodo Wallet allows you access to your private keys so you have possession of your own coins. This is a multi-coin wallet that includes a DEX (decentralized exchange).  So, you can hold many different coins in it and buy and sell them with other Komodo wallet users.	
+	<br>
+	<p><strong>Komodo Wallet</strong></p>
+		<ul><li><strong><a href="https://atomicdex.io/en/desktop/">desktop version is available for Windows, Mac, and Linux</a></strong></li></ul>
+		<ul><li><strong><a href="https://atomicdex.io/en/mobile/">mobile version is available for IOS and Android</a> <i>*IOS version is in beta-test mode.</i></strong></li></ul>
+    </div> 
   </div>
   
   <div class="w3-row w3-padding-32 w3-section">
  	<div class="w3-col m4 w3-container">
-	
-	
 	<a href="https://youtu.be/9oE3VV5GOds" target="_blank"><img src="images/trading-tutorial-thumb.png" alt="Mazacoin Documentary on Mashable" width="260" height="151" border="0"></a>
-<!-- <iframe width="260" src="https://www.youtube.com/embed/9oE3VV5GOds" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border:none;"></iframe> -->
          <p class="subtitile">Mazacoin Tutorial:  Trading Basics</p>
     </div>
     <div class="w3-col m8 w3-panel">
@@ -343,9 +350,10 @@ body, html {
   </div>
   
   
+  
 </div><!-- end wallet section -->
 
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+<div class="w3-row w3-center w3-dark-grey w3-padding-16" id="exchanges">
 	<span class="w3-xlarge">More Tools of the Trade</span>
 
 </div>
@@ -353,7 +361,7 @@ body, html {
 <!-- Container (Mining, exchanges, blockchain explorers, market watchers Section) -->
 <div class="w3-content w3-container w3-padding-64" id="mining">
   <h2 class="w3-center">Exchanges, Block Explorers, Mining, and Charts</h2>
-  <p><em>Once you have a wallet, MAZA can be earned by mining or bought in exchanges.  When you start making transactions in MAZA you can find and track those transactions in a block explorer. You might also want to look up historical price trends and other charts.</em></p>
+  <p><em>Once you have a <a href="#wallets">wallet</a>, MAZA can be earned by mining or bought in exchanges.  When you start making transactions in MAZA you can find and track those transactions in a block explorer. You might also want to look up historical price trends and other charts.</em></p>
 	<div class="w3-row">
 		<div class="w3-col m6 w3-panel">
 			<h3>Exchanges</h3>
@@ -362,8 +370,8 @@ body, html {
 				<li><strong><a href="https://freiexchange.com/market/MAZA/BTC" target="_blank">FreiExchange</a></strong> - Bitcoin (BTC) market</li>
 				<li><strong><a href="https://altquick.com/market/Mazacoin" target="_blank">Altquick Exchange</a></strong> - BTC/MAZA swap</li>
 				<li><strong><a href="https://altquick.com/swap" target="_blank">Altquick Swap</a></strong> - BTC/MAZA swap, no account necessary</li>
-				<li><!-- <a href="https://www.exbitron.com/" target="_blank">Exbitron</a> --><strong>Exbitron</strong> - exchange with DOGE and USDT.  <em>Coming Soon!</em></li>
-				<li><strong><!-- <a href="https://atomicdex.io/en/" target="_blank">Atomic Dex</a> -->Atomic Dex</strong> - a decentralized exchange inside your own wallet, no account necessary. <em>Coming Soon!</em></li>
+				<li><strong><a href="https://trade.exbitron.com/" target="_blank">Exbitron</a></strong>  - exchange with DOGE and USDT</li>
+				<li><strong><a href="https://atomicdex.io/en/" target="_blank">Komodo</a></strong> <i>formerly Atomic Dex</i> - a decentralized exchange (DEX) inside your own wallet, no account necessary and you hold your own coins</li>
 			</ul>
 		</div>
 		
@@ -374,10 +382,19 @@ body, html {
 				<li><strong><a href="https://openchains.info/coin/mazacoin/blocks" target="_blank">openchains</a></strong> - another block explorer</li>
 				<li><strong><a href="https://coinpaprika.com/coin/maza-maza/" target="_blank">CoinPaprika</a></strong> - market charts</li>
 				<li><strong><a href="https://www.coingecko.com/en/coins/maza" target="_blank">CoinGecko</a></strong> - crypto markets</li>
-				<li><strong><a href="http://bitfossil.com/" target="_blank">Bit Fossil</a></strong> - Search the blockchains by text. for example: mazacoin #NFT</li>
-				<li><strong><a href="http://apertus.io/" target="_blank">Apertus</a></strong> - etch data, text and images, into the MAZA chain</li>	
+				<li><strong><a href="http://bitfossil.com/" target="_blank">Bit Fossil</a></strong> - Search the blockchains by text. for example: mazacoin #NFT</li>	
 			</ul>
 		</div> 
+	</div>
+	
+	<div class="w3-row">
+		<div class="w3-col m12 w3-container">
+		<h3>More fun with MAZA</h3>
+		<ul>
+		<li><strong><a href="http://apertus.io/" target="_blank">Apertus</a></strong> - etch data, text and images, into the MAZA chain</li>
+		<li><strong><a href="https://313.cash/" target="_blank">Pinball.cash</a></strong> - social platform for Maza and a handful of other coins.  There are air-drops, games, NFTs, market/service place, publishing, and trading. They state that it is for temporary use and give the sound advise: "Never keep more art/data on a centralized server than you can afford to lose."  &nbsp;&nbsp;This is a fun place.  &nbsp;&nbsp;Do explore it.</li>
+		</ul>
+		</div>
 	</div>
 	
 	<div class="w3-row w3-padding-32 w3-section w3-hide-small w3-hide-small w3-hide-medium" style="background-image: url('./images/hive_background_flash.png');" >
@@ -403,24 +420,43 @@ body, html {
 			<blockquote><a href="https://miningpoolstats.stream/mazacoin-minotaurx" target="_blank">Minotaurx mining pool stats</a></blockquote>
 		<strong>SHA-256 mining</strong> - is still enabled, however, ASICBoost is no longer supported.<br>
 			<blockquote><a href="https://miningpoolstats.stream/mazacoin-sha" target="_blank">SHA-256 mining pool stats</a></blockquote>
-		<br>
-		If you would like to help towards the development of new MAZA code or join in the MAZA community join us on <a href="https://t.me/mazatribe">Telegram</a>
 		</div>
  	</div>
 	
 </div>
 
 
+<div class="w3-row w3-center w3-dark-grey w3-padding-16" id="findus">
+	<span class="w3-xlarge">Where to Find Us</span>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" id="mining">
+	<div class="w3-row w3-padding-32 w3-section">
+		<div class="w3-col m12 w3-container">
+			If you would like to help towards the development of MAZA or join in the MAZA community join us on <a href="https://t.me/mazatribe">Telegram</a>
+			<br>We are also on Discord and other platforms.
+			<br>
+			<div class="w3-xlarge w3-section">  
+		    <a href="https://t.me/mazatribe" aria-label="maza tribe on telegram"><i class="fa-brands fa-telegram w3-hover-opacity"></i></a>&nbsp;
+			<a href="https://discord.gg/v44jRADfsS" aria-label="mazatribe on discord"><i class="fa-brands fa-discord w3-hover-opacity"></i></a>&nbsp;
+			<a href="https://github.com/mazacoin" aria-label="mazacoin on github"><i class="fa-brands fa-github w3-hover-opacity"></i></a>&nbsp;
+			<a href="https://twitter.com/mazacoin" aria-label="mazacoin on twitter"><i class="fa-brands fa-x-twitter w3-hover-opacity"></i></a>&nbsp;
+			<a href="mailto:contact@mazacoin.org" aria-label="email maza tribe"><i class="fa-solid fa-envelope-square w3-hover-opacity"></i></a>&nbsp;
+	  		</div>
+		</div>
+	</div>
+</div>
 
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off" id="findus">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa-solid fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
-    <a href="https://t.me/mazatribe" aria-label="maza tribe on telegram"><i class="fa fa-telegram w3-hover-opacity"></i></a>&nbsp;
-	<a href="https://github.com/mazacoin" aria-label="mazacoin on github"><i class="fa fa-github w3-hover-opacity"></i></a>&nbsp;
-	<a href="https://twitter.com/mazacoin" aria-label="mazacoin on twitter"><i class="fa fa-twitter w3-hover-opacity"></i></a>&nbsp;
-	<a href="mailto:contact@mazacoin.org" aria-label="email maza tribe"><i class="fa fa-envelope-square w3-hover-opacity"></i></a>&nbsp;
+    <a href="https://t.me/mazatribe" aria-label="maza tribe on telegram"><i class="fa-brands fa-telegram w3-hover-opacity"></i></a>&nbsp;
+	<a href="https://discord.gg/v44jRADfsS" aria-label="mazatribe on discord"><i class="fa-brands fa-discord w3-hover-opacity"></i></a>&nbsp;
+	<a href="https://github.com/mazacoin" aria-label="mazacoin on github"><i class="fa-brands fa-github w3-hover-opacity"></i></a>&nbsp;
+	<a href="https://twitter.com/mazacoin" aria-label="mazacoin on twitter"><i class="fa-brands fa-x-twitter w3-hover-opacity"></i></a>&nbsp;
+	<a href="mailto:contact@mazacoin.org" aria-label="email maza tribe"><i class="fa-solid fa-envelope-square w3-hover-opacity"></i></a>&nbsp;
   </div>
  <!--  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> -->
 </footer>
