@@ -76,12 +76,13 @@ body, html {
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
+.w3-image-only{max-width:95%;height:auto}img{vertical-align:middle}a{color:inherit}
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-width: 1600px) {
   .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: scroll;
-    min-height: 400px;
+    /* min-height: 400px; */
   }
 }
 
@@ -94,7 +95,7 @@ body, html {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+    <a class="w3-bar-item w3-button w3-hover-black w3-right w3-hide-medium w3-hide-large" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa-solid fa-bars"></i>
     </a>
    <!--  <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a> -->
@@ -107,7 +108,7 @@ body, html {
     <a href="javascript:void(0);" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-yellow" onclick="toggleDark()">
       <i class="fa-regular fa-moon"></i>
     </a>
-	<img src="images/MAZAword_Transparent365x155.png" alt="Maza Tribe" height="32" class="w3-display-middle w3-hide-medium">
+	<img src="images/MAZAword_Transparent365x155.png" alt="Maza Tribe" height="32" class="w3-display-middle w3-hide-medium w3-hide-small">
   </div>
 
   <!-- Navbar on small screens -->
@@ -130,8 +131,10 @@ body, html {
 	</div>
   <div class="w3-half w3-display-bottomleft" style="white-space:nowrap;"><!-- w3-display-middle -->
     <!-- <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">WEBSITE</span> LOGO</span> -->
-	<span class="w3-padding-large w3-xlarge w3-wide w3-animate-opacity" ><img src="./images/MAZAword_Transparent365x155.png" alt="MAZA"></span><br>
-	<span class="w3-padding-large w3-xlarge w3-wide w3-animate-opacity"><strong> CRYPTOCURRENCY</strong></span>
+	<span class="w3-padding-large w3-xlarge w3-wide w3-animate-opacity w3-hide-small"><img src="./images/MAZAword_Transparent365x155.png" alt="MAZA" class="w3-image"></span>
+	<span class="w3-padding-small w3-large w3-wide w3-animate-opacity w3-hide-medium w3-hide-large"><img src="./images/MAZAword_Transparent365x155.png" alt="MAZA" class="w3-image-only"></span><br>
+	<span class="w3-padding-large w3-xlarge w3-wide w3-animate-opacity w3-hide-small"><strong> CRYPTOCURRENCY</strong></span>
+	<span class="w3-padding-large w3-large w3-animate-opacity w3-hide-medium w3-hide-large" style="letter-spacing:3px"><strong> CRYPTOCURRENCY</strong></span>
   </div>
 </div>
 
@@ -143,7 +146,9 @@ body, html {
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <p><b>founder, Payu Harris</b></p>
-	  <a href="https://youtu.be/3BoQGkCu_Fk" target="_blank"><img src="images/mashable-doc-thumb.png" alt="Mazacoin Documentary on Mashable" width="260" height="176" border="0"></a>
+	  <a href="https://youtu.be/3BoQGkCu_Fk" target="_blank"><img src="images/mashable-doc-thumb.png" alt="Mazacoin Documentary on Mashable" width="260" height="176" border="0" class="w3-hide-small">
+	  <img src="images/mashable-doc-thumb.png" alt="Mazacoin Documentary on Mashable" width="175" height="100" border="0" class="w3-hide-medium w3-hide-large">
+	   </a>
           <!-- <iframe width="260" height="175" src="https://www.youtube.com/embed/3BoQGkCu_Fk" allowfullscreen style="border:none;"></iframe>     -->  
                       <p class="subtitile">Mazacoin Documentary on Mashable
                       </p>
@@ -196,7 +201,7 @@ body, html {
 
 
 <div class="w3-row w3-center w3-dark-grey w3-padding-16">
-	<span class="w3-xlarge"><img src="./images/mazacoin-flat-bright-saturated.64.png" alt="Maza logo" width="64" height="64"> &nbsp;&nbsp;&nbsp; Celebrating 10 years of MAZA  &nbsp;&nbsp;&nbsp; <img src="./images/mazacoin-flat-bright-saturated.64.png" alt="maza logo" width="64" height="64" class="w3-hide-small"> </span>
+	<span class="w3-xlarge"><img src="./images/mazacoin-flat-bright-saturated.64.png" alt="Maza logo" width="64" height="64"> &nbsp;&nbsp;&nbsp; Celebrating 13 years of MAZA  &nbsp;&nbsp;&nbsp; <img src="./images/mazacoin-flat-bright-saturated.64.png" alt="maza logo" width="64" height="64" class="w3-hide-small"> </span>
   <!-- <div class="w3-quarter w3-section">
     <span class="w3-xlarge">14+</span><br>
     Partners
@@ -333,14 +338,14 @@ body, html {
 	The Komodo Wallet allows you access to your private keys so you have possession of your own coins. This is a multi-coin wallet that includes a DEX (decentralized exchange).  So, you can hold many different coins in it and buy and sell them with other Komodo wallet users.	
 	<br>
 	<p><strong>Komodo Wallet</strong></p>
-		<ul><li><strong><a href="https://atomicdex.io/en/desktop/">desktop version is available for Windows, Mac, and Linux</a></strong></li></ul>
-		<ul><li><strong><a href="https://atomicdex.io/en/mobile/">mobile version is available for IOS and Android</a> <i>*IOS version is in beta-test mode.</i></strong></li></ul>
+		<ul><li><strong><a href="https://komodoplatform.com/en/downloads/">desktop version is available for Windows, Mac, and Linux</a></strong></li></ul>
+		<ul><li><strong><a href="https://komodoplatform.com/en/downloads/">mobile version is available for IOS and Android</a> <i>*IOS version is in beta-test mode.</i></strong></li></ul>
     </div> 
   </div>
   
   <div class="w3-row w3-padding-32 w3-section">
  	<div class="w3-col m4 w3-container">
-	<a href="https://youtu.be/9oE3VV5GOds" target="_blank"><img src="images/trading-tutorial-thumb.png" alt="Mazacoin Documentary on Mashable" width="260" height="151" border="0"></a>
+	<a href="https://youtu.be/9oE3VV5GOds" target="_blank"><img src="images/trading-tutorial-thumb.png" alt="Mazacoin Documentary on Mashable" width="260" height="151" border="0" class="w3-hide-small"><img src="images/trading-tutorial-thumb.png" alt="Mazacoin Documentary on Mashable" width="175" height="100" border="0" class="w3-hide-medium w3-hide-large"></a>
          <p class="subtitile">Mazacoin Tutorial:  Trading Basics</p>
     </div>
     <div class="w3-col m8 w3-panel">
@@ -360,8 +365,36 @@ body, html {
 
 <!-- Container (Mining, exchanges, blockchain explorers, market watchers Section) -->
 <div class="w3-content w3-container w3-padding-64" id="mining">
+
   <h2 class="w3-center">Exchanges, Block Explorers, Mining, and Charts</h2>
   <p><em>Once you have a <a href="#wallets">wallet</a>, MAZA can be earned by mining or bought in exchanges.  When you start making transactions in MAZA you can find and track those transactions in a block explorer. You might also want to look up historical price trends and other charts.</em></p>
+
+	<div class="w3-row w3-padding-32 w3-section w3-hide-small w3-hide-medium" style="background-image: url('./images/hive_background_flash.png');" >
+	    <div class="w3-col m12 w3-container">
+			<h1>MAZA MINING</h1>
+		</div>
+	</div>
+	
+	<div class="w3-row w3-padding-32 w3-section w3-hide-large" >
+		<div class="w3-col m12 w3-container">
+			<h1>MAZA MINING</h1>
+			<img src="./images/hive.png" alt="hive mining in the wallet" class="w3-image">
+		</div>
+	</div>
+	
+	<div class="w3-row w3-padding-32 w3-section">
+		  <div class="w3-col m12 w3-container">
+		<!-- NEW IN MAZA 0.16.3 -->
+		<strong>Hive Mining</strong> - purchase bees with MAZA within the Maza-QT core wallet. The bees work on the blockchain to find blocks.
+			<blockquote><a href="https://hive.mazacoin.org/guide" target="_blank">Hive Mining Guide</a><br>
+						<a href="https://youtu.be/2J6fTXBR0II" target="_blank">video tutorial</a></blockquote>
+		<strong>CPU Mining</strong> - MAZA 0.16.3 incorporates the MinotaurX algorithm to allow for mining by CPU miners without ASIC equipment.
+			<blockquote><a href="https://miningpoolstats.stream/mazacoin-minotaurx" target="_blank">Minotaurx mining pool stats</a></blockquote>
+		<strong>SHA-256 mining</strong> - is still enabled, however, ASICBoost is no longer supported.<br>
+			<blockquote><a href="https://miningpoolstats.stream/mazacoin-sha" target="_blank">SHA-256 mining pool stats</a></blockquote>
+		</div>
+ 	</div>
+
 	<div class="w3-row">
 		<div class="w3-col m6 w3-panel">
 			<h3>Exchanges</h3>
@@ -371,7 +404,7 @@ body, html {
 				<li><strong><a href="https://altquick.com/market/Mazacoin" target="_blank">Altquick Exchange</a></strong> - BTC/MAZA swap</li>
 				<li><strong><a href="https://altquick.com/swap" target="_blank">Altquick Swap</a></strong> - BTC/MAZA swap, no account necessary</li>
 				<li><strong><a href="https://trade.exbitron.com/" target="_blank">Exbitron</a></strong>  - exchange with DOGE and USDT</li>
-				<li><strong><a href="https://atomicdex.io/en/" target="_blank">Komodo</a></strong> <i>formerly Atomic Dex</i> - a decentralized exchange (DEX) inside your own wallet, no account necessary and you hold your own coins</li>
+				<li><strong><a href="https://komodoplatform.com/" target="_blank">Komodo</a></strong>  - a decentralized exchange (DEX) inside your own wallet, no account necessary and you hold your own coins</li>
 			</ul>
 		</div>
 		
@@ -389,39 +422,14 @@ body, html {
 	
 	<div class="w3-row">
 		<div class="w3-col m12 w3-container">
-		<h3>More fun with MAZA</h3>
+		<h3>Selling, shopping, and creating with MAZA</h3>
 		<ul>
+		<li><strong><a href="https://mycryptocheckout.com/coins/maza/" target="_blank">MyCryptoCheckout</a></strong> - Accept MAZA and 90+ other coins in WooCommerce. 0% transaction fees. No KYC or product restrictions. Peer-to-peer transactions. Setup in minutes.</li>
 		<li><strong><a href="http://apertus.io/" target="_blank">Apertus</a></strong> - etch data, text and images, into the MAZA chain</li>
 		<li><strong><a href="https://313.cash/" target="_blank">Pinball.cash</a></strong> - social platform for Maza and a handful of other coins.  There are air-drops, games, NFTs, market/service place, publishing, and trading. They state that it is for temporary use and give the sound advise: "Never keep more art/data on a centralized server than you can afford to lose."  &nbsp;&nbsp;This is a fun place.  &nbsp;&nbsp;Do explore it.</li>
 		</ul>
 		</div>
 	</div>
-	
-	<div class="w3-row w3-padding-32 w3-section w3-hide-small w3-hide-small w3-hide-medium" style="background-image: url('./images/hive_background_flash.png');" >
-	    <div class="w3-col m12 w3-container">
-			<h1>MAZA MINING</h1>
-		</div>
-	</div>
-	
-	<div class="w3-row w3-padding-32 w3-section w3-hide-large" >
-		<div class="w3-col m12 w3-container">
-			<h1>MAZA MINING</h1>
-			<img src="./images/hive.png" alt="hive mining in the wallet">
-		</div>
-	</div>
-	
-	<div class="w3-row w3-padding-32 w3-section">
-		  <div class="w3-col m12 w3-container">
-		<!-- NEW IN MAZA 0.16.3 -->
-		<strong>Hive Mining</strong> - purchase bees with MAZA within the Maza-QT core wallet. The bees work on the blockchain to find blocks.
-			<blockquote><a href="https://hive.mazacoin.org/guide" target="_blank">Hive Mining Guide</a><br>
-						<a href="https://youtu.be/2J6fTXBR0II" target="_blank">video tutorial</a></blockquote>
-		<strong>CPU Mining</strong> - MAZA 0.16.3 incorporates the MinotaurX algorithm to allow for mining by CPU miners without ASIC equipment.
-			<blockquote><a href="https://miningpoolstats.stream/mazacoin-minotaurx" target="_blank">Minotaurx mining pool stats</a></blockquote>
-		<strong>SHA-256 mining</strong> - is still enabled, however, ASICBoost is no longer supported.<br>
-			<blockquote><a href="https://miningpoolstats.stream/mazacoin-sha" target="_blank">SHA-256 mining pool stats</a></blockquote>
-		</div>
- 	</div>
 	
 </div>
 
